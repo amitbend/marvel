@@ -36,7 +36,9 @@
         display: none;
         overflow: hidden;
         @media all and (min-width: 860px){
-            display: flex;
+            // testing centering
+            // display: flex;
+            display: block;
         }
         &_small {
             .theme-main-nav & {
@@ -46,6 +48,10 @@
         img {
             margin: 0;
             max-width: none;
+            // testing centering
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     .nav-global {

@@ -9,48 +9,58 @@
 <%namespace name='static' file='static_content.html'/>
 
 <footer class="theme-footer">
-  <div class="theme-footer_holder">
+  <!-- <div class="theme-footer_holder">
     <div class="theme-footer_section">
       <span class="theme-footer_text">If you have some questions please contact us</span>
       <a class="theme-btn theme-btn__contact" href="/contact">Contact us</a>
     </div>
-  </div>
+  </div> -->
   <div class="theme-footer_holder theme-footer_holder__color">
     <div class="theme-footer_wrapper">
       <div class="theme-footer_col">
-        <h2 class="theme-footer_col-header">About the university</h2>
+        <h2 class="theme-footer_col-header">על מדרסה</h2>
+
         <div class="theme-footer_col-holder">
-          <a class="theme-footer_col-link" href="https://raccoongang.com/en/raccoon-university/" target="_blank">Raccoon Gang University</a>  
+          <a class="theme-footer_col-link" href="https://www.madrasafree.net/about" target="_blank">על מדרסה</a>
         </div>
         <div class="theme-footer_col-holder">
-          <a class="theme-footer_col-link" href="https://raccoongang.com/en/about-us/" target="_blank">About Us</a>
+          <a class="theme-footer_col-link" href="https://www.madrasafree.net" target="_blank">קהילה</a>  
         </div>
         <div class="theme-footer_col-holder">
-          <a class="theme-footer_col-link" href="https://raccoongang.com/#our_services" target="_blank">eDX Services</a>
+          <a class="theme-footer_col-link" href="https://www.madrasafree.net/supportus" target="_blank">תמכו בנו</a>
         </div>
-        <div class="theme-footer_col-holder">
+        <!-- <div class="theme-footer_col-holder">
           <a class="theme-footer_col-link" href="https://raccoongang.com/en/blog/" target="_blank">Blog</a>
+        </div> -->
+      </div>
+      <div class="theme-footer_col">
+        <h2 class="theme-footer_col-header">קורסים</h2>
+        <!-- %for course in courses[:settings.HOMEPAGE_COURSE_MAX]:
+          <%include file="course.html" args="course=course" />
+        %endfor -->
+        <div class="theme-footer_col-holder">
+          <a class="theme-footer_col-link" href="https://studio-marvel-ficus.raccoongang.com/" target="_blank">רשימה של קורסים</a>
         </div>
       </div>
       <div class="theme-footer_col">
-        <h2 class="theme-footer_col-header">courses</h2>
+        <h2 class="theme-footer_col-header">צרו קשר ותנאים</h2>
         <div class="theme-footer_col-holder">
-          <a class="theme-footer_col-link" href="https://studio-marvel-ficus.raccoongang.com/" target="_blank">Create Course Now</a>
-        </div>
-      </div>
-      <div class="theme-footer_col">
-        <h2 class="theme-footer_col-header">Contact us</h2>
-        <div class="theme-footer_col-holder">
-          <a class="theme-footer_col-link" href="/contact">Contact Us</a>
+          <a class="theme-footer_col-link" href="/contact">צרו קשר</a>
         </div>
         <div class="theme-footer_col-holder">
-          <a class="theme-footer_col-link" href="https://raccoongang.com/en/contact-us/" target="_blank">Help</a>
+          <a class="theme-footer_col-link" href="/" target="_blank">עזרה</a>
+        </div>
+        <div class="theme-footer_col-holder">
+          <a class="theme-footer_col-link" href="/" target="_blank">תנאי שימוש</a>
+        </div>
+        <div class="theme-footer_col-holder">
+          <a class="theme-footer_col-link" href="/" target="_blank">שאלות ותשובות</a>
         </div>
       </div>
     </div>
     <div class="theme-footer_section">
       <div class="theme-footer_copyright">
-        © 2016 Racoongang. All Rights Reserved
+        © 2018 מדרסה 
         <a href="${footer['openedx_link']['url']}">
           <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
         </a>

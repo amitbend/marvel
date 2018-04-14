@@ -12,8 +12,8 @@ from django.core.urlresolvers import reverse
         </a>
     </div>
     <div class="theme-courses_content">
-        <span class="theme-courses_org">${course.display_org_with_default}</span>
-        <span class="theme-courses_code">${course.display_number_with_default}</span>
+        <!-- <span class="theme-courses_org">${course.display_org_with_default}</span>
+        <span class="theme-courses_code">${course.display_number_with_default}</span> -->
         <h1 class="theme-courses_title">${course.display_name_with_default}</h1>
         <a class="theme-btn" href="${reverse('about_course', args=[course.id.to_deprecated_string()])}">view more</a>
     </div>

@@ -152,6 +152,10 @@
 .my-courses .course-container {
     .theme-courses_content {
         width: 50%;
+        .course-title{
+            // my addition - amit
+            text-align: center;
+        }
     }
 }
 div.window-wrap section.wiki .btn.btn-primary,

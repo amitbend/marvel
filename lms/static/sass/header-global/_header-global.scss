@@ -2,7 +2,7 @@
     .primary>a {
         box-shadow: none;
         text-shadow: none;
-        color: #fff;
+        color: $theme-text-color;
         
         &:focus,
         &:active,
@@ -34,7 +34,7 @@
         }
 
         .tab-nav-item .tab-nav-link {
-            color: #fff;
+            color: $theme-text-color;
             line-height: 18px;
             padding-bottom: 5px;
             font: 14px/1.3 muliregular;

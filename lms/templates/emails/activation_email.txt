@@ -1,0 +1,27 @@
+<%! from django.utils.translation import ugettext as _ %>
+
+
+תודה רבה על הרשמתכם למדרסה!
+
+כעת תוכלו להתחיל ללמוד ערבית מדוברת בחינם, וליהנות מהקורסים וחומרי הלימוד באתר!
+
+לחצו כאן
+ % if is_secure:
+https://${ site }/activate/${ key }
+% else:
+http://${ site }/activate/${ key }
+% endif
+ לאשר את הרשמתכם  .
+
+אל תשכחו גם לעקוב אחרינו בפייסבוק (קישור) ולהיכנס לקבוצת התרגול (קישור).
+
+בִִּ(אל)נַّגַ'אח! בהצלחה!
+
+
+
+
+${_("If you need help, please use our web form at {support_url} or email {support_email}.").format(
+  support_url=support_url, support_email=support_email
+)}
+
+אימייל זה נשלח אוטומטית מאתר "מדרסה" 

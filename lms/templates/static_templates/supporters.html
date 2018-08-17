@@ -2,11 +2,27 @@
 <%! from django.utils.translation import ugettext as _ %>
 <%inherit file="../main.html" />
 
+<script src=""></script>
+
+<head>
+    <link rel="manifest" href="${static.url('js/notifications/manifest.json')}" />
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+      var OneSignal = window.OneSignal || [];
+      OneSignal.push(function() {
+        OneSignal.init({
+          appId: "e9db2dad-64cc-40e6-8998-545e1783f631",
+        });
+      });
+    </script>
+</head>
+
 <%block name="pagetitle">תומכים</%block>
 
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="container about">
         <h1>תומכים</h1>
         <p>עמוד זה יבנה בקרוב, עד עליית המערכת החדשה</p>
+        <div class='onesignal-customlink-container'></div>
     </section>
 </main>

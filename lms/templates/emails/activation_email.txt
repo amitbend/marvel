@@ -6,22 +6,19 @@
 כעת תוכלו להתחיל ללמוד ערבית מדוברת בחינם, וליהנות מהקורסים וחומרי הלימוד באתר!
 
 לחצו כאן
- % if is_secure:
+% if is_secure:
 https://${ site }/activate/${ key }
 % else:
 http://${ site }/activate/${ key }
 % endif
- לאשר את הרשמתכם  .
+ לאשר את הרשמתכם.
 
-אל תשכחו גם לעקוב אחרינו בפייסבוק (קישור) ולהיכנס לקבוצת התרגול (קישור).
+אל תשכחו גם לעקוב אחרינו בפייסבוק (https://www.facebook.com/madrasafree) ולהיכנס לקבוצת התרגול (https://www.facebook.com/groups/MadrasaFree/).
 
 בִִּ(אל)נַّגַ'אח! בהצלחה!
 
 
 
-
-${_("If you need help, please use our web form at {support_url} or email {support_email}.").format(
-  support_url=support_url, support_email=support_email
-)}
+-----------
 
 אימייל זה נשלח אוטומטית מאתר "מדרסה" 

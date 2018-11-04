@@ -4,6 +4,7 @@
          url(#{$my-font-path}/AbrahamTRIAL-Black.woff) format('woff');
     font-weight: normal;
     font-style: normal;
+    font-size: $font-size-regular;
 }
 @font-face {
     font-family: 'mulilight';
@@ -11,6 +12,8 @@
          url(#{$my-font-path}/AbrahamTRIAL-Light.woff) format('woff');
     font-weight: normal;
     font-style: normal;
+    font-size: $font-size-regular;
+
 }
 @font-face {
     font-family: 'mulilight_italic';
@@ -18,6 +21,8 @@
          url(#{$my-font-path}/AbrahamTRIAL-Thin.woff) format('woff');
     font-weight: normal;
     font-style: normal;
+    font-size: $font-size-regular;
+
 }
 @font-face {
     font-family: 'muliregular';
@@ -25,4 +30,5 @@
          url(#{$my-font-path}/AbrahamTRIAL-Regular.woff) format('woff');
     font-weight: normal;
     font-style: normal;
+    font-size: $font-size-regular;
 }

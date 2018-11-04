@@ -56,7 +56,7 @@
     }
     &_col-header {
         display: block;
-        font: 14px/1.3 muliregular;
+        font: $font-size-base/1.3 muliregular;
         color: #fff !important;
         padding: 0 0 13px;
         text-transform: uppercase;
@@ -65,11 +65,11 @@
         margin: 0 0 11px;
     }
     &_col-link {
-        font: 14px/1.3 muliregular;
+        font: $font-size-base/1.3 muliregular;
         color: #7f848c !important;
     }
     &_text {
-        font: 17px/1.3 muliregular;
+        font: $font-size-base/1.3 muliregular;
         color: #5a666e;
         margin-right: 50px;
 
@@ -80,7 +80,7 @@
         } 
     }
     &_copyright {
-        font: 13px/1.3 muliregular;
+        font: $font-size-base/1.3 muliregular;
         color: #7f848c;
     }
     &_logo {

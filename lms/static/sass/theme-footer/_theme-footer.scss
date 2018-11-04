@@ -3,7 +3,7 @@
     background: #fff;
 
     &_holder {
-        padding-top: 53px;
+        // padding-top: 53px;
 
         &__color {
             background: #85C559;
@@ -45,7 +45,7 @@
         justify-content: space-between;
         max-width: 1140px;
         margin: 0 auto 20px;
-        padding: 0 15px;
+        // padding: 0 15px;
         box-sizing: border-box;
         flex-wrap: wrap;
         flex-flow: row;
@@ -75,7 +75,7 @@
 
         @media (max-width: 450px) {
             margin-right: 0;
-            margin-bottom: 20px;
+            // margin-bottom: 20px;
             text-align: center;
         } 
     }
@@ -89,7 +89,7 @@
     }
     &_col {
         width: 100%;
-        margin: 0 0 25px;
+        // margin: 0 0 25px;
         @media all and (min-width: 600px){
             width: auto;
         }

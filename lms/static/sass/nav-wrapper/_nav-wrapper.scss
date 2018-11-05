@@ -39,10 +39,14 @@
             // testing centering
             // display: flex;
             display: block;
+            height: 180px;
+            width: 215px;
         }
         &_small {
             .theme-main-nav & {
                 display: block;
+                height: 180px;
+                width: 215px;
             }
         }
         img {

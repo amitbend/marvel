@@ -51,9 +51,9 @@ from django.utils.translation import ugettext as _
     <li class="item nav-courseware-01">
       % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
         % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-          <a class="theme-btn" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
+          <a class="btn-neutral" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
         % else:
-          <a class="theme-btn" href="/login${login_query()}">${_("Sign in")}</a>
+          <a class="btn-neutral" href="/login${login_query()}">${_("Sign in")}</a>
         % endif
       % endif
     </li>

@@ -48,6 +48,7 @@ site_status_msg = get_site_status_msg(course_id)
 </div>
 % endif
 </%block>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
         <span class="theme-nav-wrapper_logo-holder theme-nav-wrapper_logo-holder_small">
@@ -78,6 +79,7 @@ site_status_msg = get_site_status_msg(course_id)
       login|logout
     </div>
   </nav>
+
 <div class="nav-holder">
 % if uses_bootstrap:
   <header class="navigation-container header-global">
@@ -113,7 +115,7 @@ site_status_msg = get_site_status_msg(course_id)
       % if user.is_authenticated():
         <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
       % else:
-        <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
+        <%include file="bootstrap/navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
       % endif
       % if header_language_selector_is_enabled():
         <% languages = released_languages() %>
@@ -146,6 +148,8 @@ site_status_msg = get_site_status_msg(course_id)
     </div>
   </header>
     <div class="theme-main-nav">
+        <!-- blue nav -->
+
       <div class="theme-main-nav_opener"></div>
       <div class="theme-main-nav_logo">
         <a href="${marketing_link('ROOT')}">

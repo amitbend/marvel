@@ -36,8 +36,11 @@ from pipeline_mako import render_require_js_path_overrides
 ## into non-inheriting templates via the %namespace tag.
 
 % if not uses_bootstrap:
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-% endif
+<link 
+  rel="stylesheet"
+  href="https://cdn.rtlcss.com/bootstrap/v4.0.0/css/bootstrap.min.css"
+  integrity="sha384-P4uhUIGk/q1gaD/NdgkBIl3a6QywJjlsFJFk7SPRdruoGddvRVSwv5qFnvZ73cpz"
+  crossorigin="anonymous">% endif
 
 ## this needs to be here to prevent the title from mysteriously appearing in the body, in one case
 <%def name="pagetitle()" />

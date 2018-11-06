@@ -46,6 +46,10 @@
             background: $theme-color-main-hover;
             text-decoration: none;
         }
+
+        &:_special {
+            color: $cyan !important;
+        }
     }
     &_item {
         width: 100%;

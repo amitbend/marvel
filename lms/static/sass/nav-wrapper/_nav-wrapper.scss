@@ -84,8 +84,8 @@
         }
         .btn-neutral,
         .btn {
-            font: 15px/18px muliregular;
-            color: #a3a3a6;
+            font: $font-size-base/18px muliregular;
+            color: #4B4B4B;
             text-transform: uppercase;
             &:hover {
                 text-decoration: underline;

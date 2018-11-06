@@ -72,13 +72,12 @@ site_status_msg = get_site_status_msg(course_id)
             <a class="nav-link theme-main-nav_link" href="#">שירותי שפה</a>
           </li>
       </ul>
-      <a class="btn btn-outline-success my-2 my-sm-0" type="submit">הצטרפו למהפכה</a>
+      <a class="theme-btn theme-btn-warning btn-warning my-2 my-sm-0" type="submit">הצטרפו למהפכה</a>
 
     </div>
   </nav>
 <div class="nav-holder">
-% if not uses_bootstrap:
-  <p style="color:red">heyyyyyy</p>
+% if uses_bootstrap:
   <header class="navigation-container header-global">
     <nav class="navbar navbar-toggleable-md navbar-light">
       <button class="navbar-toggler navbar-toggler-right mt-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

@@ -45,10 +45,9 @@ from openedx.core.djangolib.markup import HTML, Text
                   <div class="features-icons-icon d-flex">
                     <i class="fa fa-facebook"></i>
                   </div>
-                  <h3>עוקבים בפייסבוק</h3>
-                  <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
-                  <a class="btn btn-warning"></a>
-
+                  <h3>25,000</h3>
+                  <p class="lead mb-0"> עוקבים בפייסבוק </p>
+                  <a class="btn btn-warning">LIKE</a>
                 </div>
               </div>
               <div class="col-lg-3">
@@ -56,9 +55,9 @@ from openedx.core.djangolib.markup import HTML, Text
                   <div class="features-icons-icon d-flex">
                       <i class="fas fa-graduation-cap"></i>
                   </div>
-                  <h3>Bootstrap 4 Ready</h3>
-                  <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
-                  <a class="btn btn-warning"></a>
+                  <h3>170,000</h3>
+                  <p class="lead mb-0">תלמידים</p>
+                  <a class="btn btn-warning">התחל.י ללמוד</a>
                 </div>
               </div>
               <div class="col-lg-3">
@@ -66,8 +65,8 @@ from openedx.core.djangolib.markup import HTML, Text
                   <div class="features-icons-icon d-flex">
                       <i class="far fa-comments"></i>
                   </div>
-                  <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
-                  <h3>Easy to Use</h3>
+                  <p class="lead mb-0">5,300</p>
+                  <h3>הצטרפ.י</h3>
                   <a class="btn btn-warning"></a>
                 </div>
               </div>
@@ -76,9 +75,9 @@ from openedx.core.djangolib.markup import HTML, Text
                     <div class="features-icons-icon d-flex">
                         <i class="far fa-newspaper"></i>
                     </div>
-                    <h3>Easy to Use</h3>
-                    <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
-                    <a class="btn btn-warning"></a>
+                    <h3>5000</h3>
+                    <p class="lead mb-0">רשומים לניוזלטר</p>
+                    <a class="btn btn-warning">הרשמ.י</a>
                   </div>
                 </div>
             </div>
@@ -91,7 +90,28 @@ from openedx.core.djangolib.markup import HTML, Text
 
 </main>
 
-
+<style>
+.features-icons {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  .features-icons-item {
+    max-width: 20rem;
+    .features-icons-icon {
+      height: 7rem;
+      i {
+        font-size: 4.5rem;
+      }
+    }
+    &:hover {
+      .features-icons-icon {
+        i {
+          font-size: 5rem;
+        }
+      }
+    }
+  }
+}
+</style>
 <%block name="js_extra">
    <script type="text/javascript">
       $(window).load(function() {

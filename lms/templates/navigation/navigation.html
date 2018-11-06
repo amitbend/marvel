@@ -50,11 +50,7 @@ site_status_msg = get_site_status_msg(course_id)
 </%block>
 
 <nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="#">
-        <span class="theme-nav-wrapper_logo-holder theme-nav-wrapper_logo-holder_small">
-            <img src="${static.url("images/home/LogoMadrasaConv1.png")}" alt="logo" />
-        </span>
-    </a>
+    <%include file="bootstrap/navbar-logo-header.html" args="online_help_token=online_help_token"/>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

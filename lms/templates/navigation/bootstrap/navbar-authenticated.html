@@ -17,10 +17,10 @@ from django.utils.translation import ugettext as _
 <div class="navbar-nav ml-auto">
     <ul class="navbar-nav ml-auto">
         <li class="nav-item mt-2 nav-item-open-collapsed">
-            <a class="theme-main-nav_link_special" href="${marketing_link('COURSES')}">${_('Explore courses')}</a>
+            <a class="theme-main-nav_link_special px-4" href="${marketing_link('COURSES')}">${_('Explore courses')}</a>
         </li>
         <li class="nav-item mt-2 nav-item-open-collapsed">
-            <a class="theme-main-nav_link_special" href="library">ספריית תכנים</a>
+            <a class="theme-main-nav_link_special px-4" href="library">ספריית תכנים</a>
         </li>
       </ul>
 </div>
@@ -42,18 +42,14 @@ from django.utils.translation import ugettext as _
 </div>
 <div class="collapse navbar-collapse">
   <ul class="navbar-nav mr-auto">
-    <li class="nav-item px-4">
-      <a class=" btn btn-warning my-2 my-sm-0" style="border-radius: 39px; padding-right: 20px; padding-left: 20px; ">הצטרפו
-        למהפכה!</a>
-    </li>
-    <li class="nav-item px-4">
-      <a class="theme-main-nav_link px-1" role="button" href="/login${login_query()}">
-        ${_("Sign in")}
-      </a>
-      |
-      <a class="theme-main-nav_link px-1" href="/register${login_query()}">${_("Register")}</a>
 
+    <li class="nav-item px-4">
+        <a href="${get_online_help_info(online_help_token)['doc_url']}"
+        target="_blank"
+        class="theme-main-nav_link px-4">${_("Help")}</a>
     </li>
+    <%include file="../../user_dropdown.html"/>
+
   </ul>
 
 </div>

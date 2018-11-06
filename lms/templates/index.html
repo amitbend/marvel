@@ -8,6 +8,8 @@ from django.core.urlresolvers import reverse
 from openedx.core.djangolib.markup import HTML, Text
 %>
 
+
+
 <main id="main" aria-label="Content" tabindex="-1">
   <section class="home">
     <section class="promo-box">
@@ -34,26 +36,34 @@ from openedx.core.djangolib.markup import HTML, Text
     <section class="statistics">
     </section>
     <section class="qoute">
+        <blockquote class="blockquote">
+            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+          </blockquote>
     </section>
     <section class="press">
     </section>
     <section class="supporters">
         <div class="container">
+          <div class="row">
+            <h3>בשביל ללמוד שפה לא מספיק קורס מעולה, כי אי אפשר ללמוד לתקשר מבלי... לתקשר</h3>
+            <h5>את התכנים שתלמדו בקורס תוכלו לתרגל יחד עם הקהילה של מדרסה מכל מקום ובכל מקום</h5>
+          </div>
             <div class="row">
               <div class="col-lg-3">
                 <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
                   <div class="features-icons-icon d-flex">
-                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-facebook fa-4x	"></i>
                   </div>
                   <h3>25,000</h3>
                   <p class="lead mb-0"> עוקבים בפייסבוק </p>
-                  <a class="btn btn-warning">LIKE</a>
+                  <a class="btn btn-warning fa-4x	">LIKE</a>
                 </div>
               </div>
               <div class="col-lg-3">
                 <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
                   <div class="features-icons-icon d-flex">
-                      <i class="fa fa-graduation-cap"></i>
+                      <i class="fa fa-graduation-cap fa-4x	"></i>
                   </div>
                   <h3>170,000</h3>
                   <p class="lead mb-0">תלמידים</p>
@@ -63,17 +73,17 @@ from openedx.core.djangolib.markup import HTML, Text
               <div class="col-lg-3">
                 <div class="features-icons-item mx-auto mb-0 mb-lg-3">
                   <div class="features-icons-icon d-flex">
-                      <i class="fa fa-comments"></i>
+                      <i class="fa fa-comments fa-4x	"></i>
                   </div>
                   <p class="lead mb-0">5,300</p>
-                  <h3>הצטרפ.י</h3>
-                  <a class="btn btn-warning"></a>
+                  <h3>חברים בקבוצת תרגול</h3>
+                  <a class="btn btn-warning">הצטרפ.י</a>
                 </div>
               </div>
               <div class="col-lg-3">
                   <div class="features-icons-item mx-auto mb-0 mb-lg-3">
                     <div class="features-icons-icon d-flex">
-                        <i class="fa fa-newspaper"></i>
+                        <i class="fa fa-newspaper-o fa-4x	"></i>
                     </div>
                     <h3>5000</h3>
                     <p class="lead mb-0">רשומים לניוזלטר</p>
@@ -90,28 +100,7 @@ from openedx.core.djangolib.markup import HTML, Text
 
 </main>
 
-<style>
-.features-icons {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
-  .features-icons-item {
-    max-width: 20rem;
-    .features-icons-icon {
-      height: 7rem;
-      i {
-        font-size: 4.5rem;
-      }
-    }
-    &:hover {
-      .features-icons-icon {
-        i {
-          font-size: 5rem;
-        }
-      }
-    }
-  }
-}
-</style>
+
 <%block name="js_extra">
    <script type="text/javascript">
       $(window).load(function() {

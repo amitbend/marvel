@@ -1,3 +1,17 @@
+body {
+	font-size: $font-size-regular;
+	line-height: 1.4;
+}
+h1 {
+	font-size: $font-size-h1;
+}
+h2 {
+	font-size: $font-size-h2;
+}
+h3 {
+	font-size: $font-size-h3;
+}
+
 .promo-box_wrapper {
 	padding: 15px;
 }
@@ -15,9 +29,10 @@
 .features-list {
 	margin: 0;
 	padding: 0;
-	&.fa-ul-rtl {
+	&.fa-ul.fa-ul-rtl {
 		margin-right: 2.14285714em;
 		margin-left: 0;
+		padding-right: 0;
 		.fa-li {
 			font-size: 20px !important;
 			right: -2.14285714em;

@@ -1,6 +1,21 @@
+body {
+	font-size: $font-size-regular;
+	line-height: 1.4;
+}
+h1 {
+	font-size: $font-size-h1;
+}
+h2 {
+	font-size: $font-size-h2;
+}
+h3 {
+	font-size: $font-size-h3;
+}
+
 .promo-box_wrapper {
 	padding: 15px;
 }
+
 .theme-btn__invert {
     border-radius: 8px;
 	&.home-cta {
@@ -9,4 +24,28 @@
 		max-width: 400px;
 		font-size: $font-size-regular;
 	}	
+}
+
+.features-list {
+	margin: 0;
+	padding: 0;
+	&.fa-ul.fa-ul-rtl {
+		margin-right: 2.14285714em;
+		margin-left: 0;
+		padding-right: 0;
+		.fa-li {
+			font-size: 20px !important;
+			right: -2.14285714em;
+			left: auto;
+		}
+	}
+	li {
+		font-size: $font-size-regular;
+		line-height: 1.5;
+	}
+}
+
+.features-icons {
+	background-image: url("/static/marvel/images/home/Mask Group 13.png");
+	background: url("../images/home/Mask Group 13.png") 50% 15%;
 }

@@ -24,6 +24,33 @@ from openedx.core.djangolib.markup import HTML, Text
 <%block name="bodyclass">view-dashboard is-authenticated</%block>
 
 
+<script>
+    let username = "Amit";
+    let courseId = "course-v1:edX+DemoX+Demo_Course";
+
+    fetch("https://madrasafree.com/api/grades/v0/course_grade/"  + courseId + "/users/?username="+ username).then((response)=>{
+      console.log('grade',response)
+      if (!response.ok) throw('')
+      return response.json();
+    })
+    .then((grade)=>{
+      grade = grade[0];
+      setProgress(grade && grade.percent ? grade.percent*100 : 0);
+    })
+    .catch((err)=>{
+      setProgress(0);
+    })
+  
+    function setProgress(value=0){
+      let bar = document.getElementById('course-progress');
+      bar.setAttribute("value",value)
+    }
+  </script>
+
+<div class="progress">
+    <div class="progress-bar bg-warning" id="course-progress" role="progressbar" style="width: 0%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+
 <%block name="js_extra">
   <script src="${static.url('js/commerce/credit.js')}"></script>
   <%static:js group='dashboard'/>
@@ -83,7 +110,7 @@ from openedx.core.djangolib.markup import HTML, Text
     %endif
 
 </div>
-
+<p>${course_enrollments}</p>
 <main id="main" aria-label="Content" tabindex="-1">
     <div class="container dashboard" id="dashboard-main">
       <div class="my-courses" id="my-courses">

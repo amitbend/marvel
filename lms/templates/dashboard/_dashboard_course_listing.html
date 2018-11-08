@@ -51,6 +51,8 @@ from student.helpers import (
   % else:
     <% mode_class = '' %>
   % endif
+
+<p> ${credit_status},${enrollment},${course_overview},${course_mode_info} </p>
 <div class="course-container">
 <article class="course${mode_class} theme-courses">
   <% course_target = reverse('info', args=[unicode(course_overview.id)]) %>

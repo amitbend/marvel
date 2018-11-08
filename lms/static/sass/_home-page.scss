@@ -22,19 +22,18 @@ h3 {
 .theme-btn-special {
     display: inline-block;
     vertical-align: middle;
-    font: $font-size-regular/1.3 muliregular;
-    color: $theme-footer-link;;
+    font: 27px/1.3 muliregular;
+    color: $theme-footer-link !important;
     border: 2px solid $theme-color-special;
 	border-radius: 8px;
     padding: 10px 40px;
     box-shadow: none;
-    border-radius: 0;
     background: $theme-color-special;
     text-transform: uppercase;
     transition: all .1s;
     white-space: nowrap;
 	&:hover {
-		color: $theme-color-special;
+		color: $theme-color-special !important;
 		background: $theme-footer-link;
 		border-color: $theme-color-special;
 		text-decoration: none;
@@ -106,12 +105,22 @@ h3 {
 		background-color: transparent;
 		border-radius: 0;
 	}
+	.press-link {
+		white-space: nowrap;
+		color: #4B4B4B;
+	}
 }
 
 .supporters {
 	background: url("../images/home/Mask Group 17.png");
 	.btn-primary {
 		background-color: $theme-color-special;
+	}
+	.features-icons-icon {
+		color: $theme-color-special;
+	}
+	.lead2 {
+		font-size: $font-size-h1;
 	}
 }
 

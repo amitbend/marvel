@@ -17,6 +17,28 @@ h3 {
 .theme-btn {
 	padding: 10px 40px;
 	font-size: $font-size-regular;
+	border-radius: 8px;
+}
+.theme-btn-special {
+    display: inline-block;
+    vertical-align: middle;
+    font: $font-size-regular/1.3 muliregular;
+    color: $theme-footer-link;;
+    border: 2px solid $theme-color-special;
+	border-radius: 8px;
+    padding: 10px 40px;
+    box-shadow: none;
+    border-radius: 0;
+    background: $theme-color-special;
+    text-transform: uppercase;
+    transition: all .1s;
+    white-space: nowrap;
+	&:hover {
+		color: $theme-color-special;
+		background: $theme-footer-link;
+		border-color: $theme-color-special;
+		text-decoration: none;
+	}
 }
 
 .promo-box_wrapper {

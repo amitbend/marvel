@@ -18,19 +18,23 @@ $theme-color-main: #85C559;
 $theme-color-main-hover: #85C559;
 $theme-color-special: #56C1E9;
 
-$theme-header-bg: #4a509d;
-$theme-text-color: #4a509d;
+$theme-header-bg: #34479B;
+$theme-text-color: #34479B;
 $theme-footer-bg: #33383f;
 $link-hover: lighten($theme-color-main, 20%);
 $theme-main-nav: #4a509d;
-$theme-main-nav-link-hover: #8ec048;
+$theme-main-nav-link-hover: #85C559;
 $disable-text-color: #3b3b3b;
 $disable-text-bg: #e8e8e8;
 $mobile-indent: 15px;
-$icon-color: #8ec048;
+$icon-color: #85C559;
 $my-font-path: "../fonts" !default;
 $img-path: "../images" !default;
 
 // amit
-$font-size-regular: 23px;
-$font-size-base : 23px;
+$font-size-regular: 27px;
+$font-size-base : 27px;
+$font-size-h1 : 52px;
+$font-size-h2 : 48px;
+$font-size-h3 : 38px;
+

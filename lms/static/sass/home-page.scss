@@ -1,0 +1,31 @@
+.promo-box_wrapper {
+	padding: 15px;
+}
+
+.theme-btn__invert {
+    border-radius: 8px;
+	&.home-cta {
+		padding: 16px 40px;
+		width: 100%;
+		max-width: 400px;
+		font-size: $font-size-regular;
+	}	
+}
+
+.features-list {
+	margin: 0;
+	padding: 0;
+	&.fa-ul-rtl {
+		margin-right: 2.14285714em;
+		margin-left: 0;
+		.fa-li {
+			font-size: 20px !important;
+			right: -2.14285714em;
+			left: auto;
+		}
+	}
+	li {
+		font-size: $font-size-regular;
+		line-height: 1.5;
+	}
+}

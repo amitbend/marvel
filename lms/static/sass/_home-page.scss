@@ -67,9 +67,13 @@ h3 {
 .quote {
 	.blockquote-footer {
 		font-size: $font-size-regular;
+		&:before {
+			content: " ";
+		}
 	}
 	.quotation-mark {
-		font-size: 192px;
+		font-size: 134px;
+		line-height: 1;
 	}
 }
 
@@ -84,6 +88,9 @@ h3 {
 
 .supporters {
 	background: url("../images/home/Mask Group 17.png");
+	.btn-primary {
+		background-color: $theme-color-special;
+	}
 }
 
 

@@ -1,0 +1,12 @@
+.promo-box_wrapper {
+	padding: 15px;
+}
+.theme-btn__invert {
+    border-radius: 8px;
+	&.home-cta {
+		padding: 16px 40px;
+		width: 100%;
+		max-width: 400px;
+		font-size: $font-size-regular;
+	}	
+}

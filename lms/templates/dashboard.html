@@ -24,6 +24,25 @@ from openedx.core.djangolib.markup import HTML, Text
 <%block name="bodyclass">view-dashboard is-authenticated</%block>
 
 
+<script>
+    let username = "${user.username}";
+    let courseId = "course-v1:edX+DemoX+Demo_Course";
+  
+    fetch(`https://madrasafree.com/api/grades/v0/course_grade/${courseId}/users/?username=${user.username}`).then((grade)=>{
+      setProgress(grade && grade.percent ? grade.percent*100 : 0);
+    }).catch((err)=>{
+      setProgress(0);
+    })
+  
+    function setProgress(value=0){
+      let bar = document.getElementById('course-progress');
+      bar.setAttribute("aria-valuenow",value)
+    }
+  </script>
+<div class="progress">
+    <div class="progress-bar bg-warning" id="course-progress" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+
 <%block name="js_extra">
   <script src="${static.url('js/commerce/credit.js')}"></script>
   <%static:js group='dashboard'/>

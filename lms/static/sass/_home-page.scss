@@ -58,19 +58,28 @@ h3 {
 
 .features-icons {
 	background: url("../images/home/Mask Group 13.png") 50% 15%;
+	color: $theme-footer-link;
 	h1, h2, h3, h4, h5, h6 {
 		color: $theme-footer-link;
 	}
 }
 
-.qoute {
+.quote {
 	.blockquote-footer {
 		font-size: $font-size-regular;
+	}
+	.quotation-mark {
+		font-size: 192px;
 	}
 }
 
 .press {
 	background-color: $theme-color-special;
+	.card-header, .card-footer {
+		border: none;
+		background-color: transparent;
+		border-radius: 0;
+	}
 }
 
 .supporters {

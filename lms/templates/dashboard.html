@@ -27,7 +27,7 @@ from openedx.core.djangolib.markup import HTML, Text
 <script>
     let username = "Amit";
     let courseId = "course-v1:edX+DemoX+Demo_Course";
-    let x= ${user};
+    let x= "${user}";
     fetch("https://madrasafree.com/api/grades/v0/course_grade/"  + courseId + "/users/?username="+ username).then((response)=>{
       console.log('grade',response)
       if (!response.ok) throw('')
@@ -35,20 +35,20 @@ from openedx.core.djangolib.markup import HTML, Text
     })
     .then((grade)=>{
       grade = grade[0];
-      setProgress(grade && grade.percent ? grade.percent*100 : 0);
+      setProgress(grade && grade.percent ? grade.percent*100 : 1);
     })
     .catch((err)=>{
-      setProgress(0);
+      setProgress(1);
     })
   
-    function setProgress(value=0){
+    function setProgress(value=1){
       let bar = document.getElementById('course-progress');
       bar.style.width =  value + "%"
     }
   </script>
 
 <div class="progress">
-    <div class="progress-bar bg-warning" id="course-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="progress-bar bg-warning" id="course-progress" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 
 <%block name="js_extra">

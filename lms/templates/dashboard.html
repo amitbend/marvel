@@ -27,7 +27,7 @@ from openedx.core.djangolib.markup import HTML, Text
 <script>
     let username = "Amit";
     let courseId = "course-v1:edX+DemoX+Demo_Course";
-
+    let x= "${user}";
     fetch("https://madrasafree.com/api/grades/v0/course_grade/"  + courseId + "/users/?username="+ username).then((response)=>{
       console.log('grade',response)
       if (!response.ok) throw('')
@@ -35,20 +35,20 @@ from openedx.core.djangolib.markup import HTML, Text
     })
     .then((grade)=>{
       grade = grade[0];
-      setProgress(grade && grade.percent ? grade.percent*100 : 0);
+      setProgress(grade && grade.percent ? grade.percent*100 : 1);
     })
     .catch((err)=>{
-      setProgress(0);
+      setProgress(1);
     })
   
-    function setProgress(value=0){
+    function setProgress(value=1){
       let bar = document.getElementById('course-progress');
-      bar.setAttribute("value",value)
+      bar.style.width =  value + "%"
     }
   </script>
 
 <div class="progress">
-    <div class="progress-bar bg-warning" id="course-progress" role="progressbar" style="width: 0%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="progress-bar bg-warning" id="course-progress" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 
 <%block name="js_extra">
@@ -110,7 +110,7 @@ from openedx.core.djangolib.markup import HTML, Text
     %endif
 
 </div>
-<p>${course_enrollments}</p>
+<p>${course_enrollments},${cert_statuses}</p>
 <main id="main" aria-label="Content" tabindex="-1">
     <div class="container dashboard" id="dashboard-main">
       <div class="my-courses" id="my-courses">
@@ -127,6 +127,7 @@ from openedx.core.djangolib.markup import HTML, Text
 % for dashboard_index, enrollment in enumerate(course_enrollments):
 <% show_courseware_link = (enrollment.course_id in show_courseware_links_for) %>
 <% cert_status = cert_statuses.get(enrollment.course_id) %>
+<p>${user},${enrollment},${dashboard_index}</p>
 <% can_unenroll = (not cert_status) or cert_status.get('can_unenroll') %>
 <% credit_status = credit_statuses.get(enrollment.course_id) %>
 <% show_email_settings = (enrollment.course_id in show_email_settings_for) %>

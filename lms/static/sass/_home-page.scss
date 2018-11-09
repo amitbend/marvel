@@ -18,6 +18,8 @@ h3 {
 	padding: 10px 40px;
 	font-size: $font-size-regular;
 	border-radius: 8px;
+	white-space: normal;
+    text-align: center;
 }
 .theme-btn-special {
     display: inline-block;
@@ -31,7 +33,8 @@ h3 {
     background: $theme-color-special;
     text-transform: uppercase;
     transition: all .1s;
-    white-space: nowrap;
+    white-space: normal;
+	text-align: center;
 	&:hover {
 		color: $theme-color-special !important;
 		background: $theme-footer-link;

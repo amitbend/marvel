@@ -4,11 +4,13 @@
 	background-repeat: no-repeat;
 	min-height: 600px;
 	.reg-user-header {
-		margin: 120px auto;
-		max-width: 400px;
+		margin: auto;
+		padding: 120px 1rem;
+		max-width: 540px;
 	}
 	.reg-user-progress {
-		max-width: 400px;
+		max-width: 540px;
+		width: 100%;
 	}
 }
 

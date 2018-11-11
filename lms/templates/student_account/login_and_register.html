@@ -5,8 +5,7 @@
     from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
     from openedx.core.djangolib.js_utils import dump_js_escaped_json
 %>
-<%namespace name='static' file='../static_content.html'/>
-
+<%namespace name='static' file='/static_content.html'/>
 
 <%inherit file="../main.html" />
 
@@ -37,7 +36,8 @@
         </script>
     % endfor
 </%block>
-<link ref="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="section-bkg-wrapper">
     <main id="main" aria-label="Content" tabindex="-1">

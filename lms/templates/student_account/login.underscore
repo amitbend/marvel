@@ -3,14 +3,14 @@
 
 <% if ( context.createAccountOption !== false ) { %>
 <div class="toggle-form">
-    <span class="text">עדיין לא רשום?</span>
+    <span class="text text-right">עדיין לא רשום?</span>
     <a href="#login" class="form-toggle" data-type="register">צור חשבון</a>
 </div>
 <% } %>
 
-<h2>התחבר</h2>
+<h2 class="text-right">התחבר</h2>
 
-<form id="login" class="login-form" tabindex="-1" method="POST">
+<form id="login" class="login-form text-right" tabindex="-1" method="POST">
 
     <p class="sr">
         <% if ( context.providers.length > 0 && !context.currentProvider || context.hasSecondaryProviders ) { %>

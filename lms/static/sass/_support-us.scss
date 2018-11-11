@@ -1,4 +1,4 @@
-.reg-user-top {
+.support-us-top {
 	background: url("../images/support-us/support-us-top-bg.png");
 	background-position: center;
 	background-repeat: no-repeat;
@@ -6,6 +6,7 @@
 	min-height: 500px;
 	.support-us_heading {
 		color: $theme-footer-link;
+		text-align: right;
 	}
 }
 

@@ -108,7 +108,6 @@ from openedx.core.djangolib.markup import HTML, Text
     %endif
 
 </div>
-<p>${course_enrollments},${cert_statuses}</p>
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="reg-user">
         <div class="container">
@@ -135,6 +134,7 @@ from openedx.core.djangolib.markup import HTML, Text
         </div>
       </section>
       <%include file="dashboard/common.html"/>
+      <p>${course_enrollments},${cert_statuses}</p>
 
       
     <div class="container dashboard" id="dashboard-main">

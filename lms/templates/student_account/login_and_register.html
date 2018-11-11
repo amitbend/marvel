@@ -7,6 +7,7 @@
 %>
 <%namespace name='static' file='../static_content.html'/>
 
+
 <%inherit file="../main.html" />
 
 <%block name="pagetitle">${_("Sign in or Register")}</%block>
@@ -32,7 +33,8 @@
 <%block name="header_extras">
     % for template_name in ["account", "access", "form_field", "login", "register", "institution_login", "institution_register", "password_reset", "hinted_login"]:
         <script type="text/template" id="${template_name}-tpl">
-            <%static:include path="student_account/${template_name}.underscore" />
+            <%include file="${template_name}.underscore" />
+
         </script>
     % endfor
 </%block>

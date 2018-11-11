@@ -4,32 +4,32 @@
 	.nav-item {
 		font-size: $font-size-smaller;
 		line-height: 1.5;
-		padding: 20px;
+		
 		.nav-link {
 			color: $theme-color-special;
+			padding: 20px 10px;
 			&:hover {
 				color: $text-color;
 			}
 			&.active {
-				border: 3px solid $text-color;
+				border-bottom: 3px solid $text-color;
 			}
 		}
 	}
 }
 
+.flex-md-equal > * {
+	flex: 1;
+}
+
 .lang-courses {
-	.flex-md-equal {
-		flex: 1;
-	}
-	.lang-courses-img {
+	.lang-courses-pict {
 		background-image: url("../images/language-services/lang-service-courses.png");
 		background-position: center;
 		background-size: cover;
-		flex: 1;
 	}
 	.lang-courses-text {
 		background-color: $theme-color-special;
-		flex: 1;
 		text-align: right;
 	}
 }

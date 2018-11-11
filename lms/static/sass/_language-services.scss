@@ -18,6 +18,9 @@
 }
 
 .lang-courses {
+	.flex-md-equal {
+		flex: 1;
+	}
 	.lang-courses-img {
 		background-image: url("../images/language-services/lang-service-courses.png");
 		background-position: center;

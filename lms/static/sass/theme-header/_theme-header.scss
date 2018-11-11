@@ -19,3 +19,19 @@
         flex-direction: column;
     }
 }
+
+
+/*:::::::::::::::::::::::: header logged ::::::::::::::::::::::::::*/
+.profile-picture-link.profile-picture {
+	height: 72px;
+	width: 72px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+.profile-picture-link.dropdown-toggle::after {
+	content: " ";
+}
+
+.nav-item-open-collapsed {
+	color: $theme-color-special;
+}

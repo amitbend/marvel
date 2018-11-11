@@ -1,3 +1,7 @@
+.lang-services-top {
+	background-color: $theme-color-main;
+	color: $theme-footer-link;
+}
 .lang-services-nav {
 	margin: 0;
 	padding: 0;
@@ -23,6 +27,7 @@
 }
 
 .lang-courses {
+	min-height: 800px;
 	.lang-courses-pict {
 		background-image: url("../images/language-services/lang-service-courses.png");
 		background-position: center;
@@ -38,6 +43,7 @@
 }
 
 .lang-lectures {
+	min-height: 800px;
 	.lang-lectures-pict {
 		background-image: url("../images/language-services/lang-service-lectures.png");
 		background-position: center;
@@ -50,6 +56,7 @@
 }
 
 .lang-translation {
+	min-height: 800px;
 	.lang-translation-pict {
 		background-image: url("../images/language-services/lang-service-translation.png");
 		background-position: center;

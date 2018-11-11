@@ -52,6 +52,9 @@
 	.lang-lectures-text {
 		background-color: $warning-color;
 		text-align: right;
+		h3 {
+			font-family: muliregular;
+		}
 	}
 }
 
@@ -65,6 +68,9 @@
 	.lang-translation-text {
 		background-color: $theme-color-main;
 		text-align: right;
+		h3 {
+			font-family: muliregular;
+		}
 	}
 }
 

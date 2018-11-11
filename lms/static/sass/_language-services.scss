@@ -34,9 +34,29 @@
 	}
 }
 
+.lang-lectures {
+	.lang-lectures-pict {
+		background-image: url("../images/language-services/lang-service-lectures.png");
+		background-position: center;
+		background-size: cover;
+	}
+	.lang-lectures-text {
+		background-color: $warning-color;
+		text-align: right;
+	}
+}
 
-
-
+.lang-translation {
+	.lang-translation-pict {
+		background-image: url("../images/language-services/lang-service-translation.png");
+		background-position: center;
+		background-size: cover;
+	}
+	.lang-translation-text {
+		background-color: $theme-color-main;
+		text-align: right;
+	}
+}
 
 
 

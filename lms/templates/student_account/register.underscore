@@ -9,7 +9,6 @@
 <h2 class="text-right"> צור חשבון חדש </h2>
 
 <form id="register" class="register-form text-right" autocomplete="off" tabindex="-1" method="POST">
-    <p> ${context} </p>
     <% if (!context.currentProvider) { %>
         <% if (context.providers.length > 0 || context.hasSecondaryProviders) { %>
             <div class="login-providers">
@@ -22,11 +21,11 @@
                 _.each( context.providers, function( provider) {
                     if ( provider.registerUrl ) { %>
                         <button type="button" class="button button-primary button-<%- provider.id %> login-provider register-<%- provider.id %>" data-provider-url="<%- provider.registerUrl %>">
-                            <div class="icon <% if ( provider.iconClass ) { %>fa <%- provider.iconClass %><% } %>" aria-hidden="true">
+                            <i class="icon <% if ( provider.iconClass ) { %>fa <%- provider.iconClass %><% } %>" aria-hidden="true">
                                 <% if ( provider.iconImage ) { %>
                                     <img class="icon-image" src="<%- provider.iconImage %>" alt="<%- provider.name %> icon" />
                                 <% } %>
-                            </div>
+                            </i>
                             <span aria-hidden="true"><%- provider.name %></span>
                             <span class="sr"><%- _.sprintf( gettext("Create account using %(providerName)s."), {providerName: provider.name} ) %></span>
                         </button>

@@ -8,10 +8,25 @@
 	display: none;
 }
 
+.nav-item .theme-main-nav_link {
+	&:hover {
+		background-color: transparent;
+		color: $theme-color-main !important;
+	}
+	&.active {
+		border-bottom: 3px solid $theme-color-main;
+		color: $theme-color-main !important;
+	}
+}
+
 .nav-item .theme-main-nav_link.special {
 	color: $theme-color-special !important;
 	&:hover {
-		background-color: $theme-color-special;
-		color: $theme-footer-link !important;
+		background-color: transparent;
+		color: $text-color !important;
+	}
+	&.active {
+		border-bottom: 3px solid $text-color;
+		color: $text-color !important;
 	}
 }

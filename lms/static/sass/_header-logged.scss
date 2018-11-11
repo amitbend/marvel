@@ -9,9 +9,9 @@
 }
 
 .nav-item .theme-main-nav_link.special {
-	color: $theme-color-special;
+	color: $theme-color-special !important;
 	&:hover {
 		background-color: $theme-color-special;
-		color: $theme-footer-link;
+		color: $theme-footer-link !important;
 	}
 }

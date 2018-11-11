@@ -6,10 +6,10 @@
     <a href="#login" class="form-toggle" data-type="login"><%- gettext("Sign in.") %></a>
 </div>
 
-<h2> צור חשבון חדש </h2>
+<h2 class="text-right"> צור חשבון חדש </h2>
 
-<form id="register" class="register-form" autocomplete="off" tabindex="-1" method="POST">
-
+<form id="register" class="register-form text-right" autocomplete="off" tabindex="-1" method="POST">
+    <p> context </p>
     <% if (!context.currentProvider) { %>
         <% if (context.providers.length > 0 || context.hasSecondaryProviders) { %>
             <div class="login-providers">

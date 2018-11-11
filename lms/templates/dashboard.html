@@ -24,28 +24,7 @@ from openedx.core.djangolib.markup import HTML, Text
 <%block name="bodyclass">view-dashboard is-authenticated</%block>
 
 
-<script>
-    let username = "Amit";
-    let courseId = "course-v1:edX+DemoX+Demo_Course";
-    username = "${user}";
-    fetch("https://madrasafree.com/api/grades/v0/course_grade/"  + courseId + "/users/?username="+ username).then((response)=>{
-      console.log('grade',response)
-      if (!response.ok) throw('')
-      return response.json();
-    })
-    .then((grade)=>{
-      grade = grade[0];
-      setProgress(grade && grade.percent ? grade.percent*100 : 1);
-    })
-    .catch((err)=>{
-      setProgress(1);
-    })
-  
-    function setProgress(value=1){
-      let bar = document.getElementById('course-progress');
-      bar.style.width =  value + "%"
-    }
-  </script>
+
 
 
 
@@ -60,6 +39,26 @@ from openedx.core.djangolib.markup import HTML, Text
         changeEmailSettings: "${reverse('change_email_settings') | n, js_escaped_string}"
       });
     });
+  </script>
+  <script>
+    let courseId = "course-v1:madrasa+course1+2018";
+    let username = "${user}";
+    fetch("https://madrasafree.com/api/grades/v0/course_grade/"  + courseId + "/users/?username="+ username).then((response)=>{
+      if (!response.ok) throw('bad response');
+      return response.json();
+    })
+    .then((grade)=>{
+      grade = grade[0];
+      setProgress(grade && grade.percent ? grade.percent*100 : 1);
+    })
+    .catch((err)=>{
+      setProgress(1);
+    })
+  
+    function setProgress(value=1){
+      let bar = document.getElementById('course-progress');
+      bar.style.width =  value + "%"
+    }
   </script>
   % if settings.FEATURES.get('ENABLE_DASHBOARD_SEARCH'):
     <%static:require_module module_name="course_search/js/dashboard_search_factory" class_name="DashboardSearchFactory">
@@ -112,23 +111,23 @@ from openedx.core.djangolib.markup import HTML, Text
     <section class="reg-user">
         <div class="container">
           <div class="reg-user-header">
-            <h1 class="text-right">מרחבא אמיר!</h1>
+            <h1 class="text-right">מרחבא ${user}!</h1>
             <a href="#" class="theme-btn theme-btn__invert w-100">המשך בקורס ״מדרסה מתחילים״</a>
           </div>		
           <div class="d-flex justify-content-between align-items-center flex-column flex-md-row">
             <div class="text-center p-3">
-              <p>כמה שעורים סיימתי?</p>
-              <p class="big-num-text mt-1">5 / 20</p>
+              <!-- <p>כמה שעורים סיימתי?</p>
+              <p class="big-num-text mt-1">5 / 20</p> -->
             </div>
             <div class="reg-user-progress text-center text-md-right p-3">
               <p>כמה התקדמתי?</p>
               <div class="progress mt-3 ml-md-3">
-                <div class="progress-bar bg-warning" id="course-progress" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-warning" id="course-progress" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
             <div class="text-center p-3">
-              <p>כמה מילים למדתי?</p>
-              <p class="big-num-text mt-1">35 / 490</p>
+              <!-- <p>כמה מילים למדתי?</p>
+              <p class="big-num-text mt-1">35 / 490</p> -->
             </div>
           </div>
         </div>

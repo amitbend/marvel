@@ -9,6 +9,9 @@
 }
 
 .nav-item .theme-main-nav_link {
+	border-bottom: 3px solid transparent;
+	padding: 12px 0;
+    line-height: 1;
 	&:hover {
 		background-color: transparent;
 		color: $theme-color-main !important;

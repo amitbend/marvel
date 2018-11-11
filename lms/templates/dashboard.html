@@ -27,7 +27,7 @@ from openedx.core.djangolib.markup import HTML, Text
 <script>
     let username = "Amit";
     let courseId = "course-v1:edX+DemoX+Demo_Course";
-    let x= "${user}";
+    username = "${user}";
     fetch("https://madrasafree.com/api/grades/v0/course_grade/"  + courseId + "/users/?username="+ username).then((response)=>{
       console.log('grade',response)
       if (!response.ok) throw('')
@@ -134,6 +134,8 @@ from openedx.core.djangolib.markup import HTML, Text
           </div>
         </div>
       </section>
+      <%include file="dashboard/common.html"/>
+
       
     <div class="container dashboard" id="dashboard-main">
       <div class="my-courses" id="my-courses">

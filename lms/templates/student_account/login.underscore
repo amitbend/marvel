@@ -2,7 +2,7 @@
 </div>
 
 <% if ( context.createAccountOption !== false ) { %>
-<div class="toggle-form">
+<div class="toggle-form text-right">
     <span class="text text-right">עדיין לא רשום?</span>
     <a href="#login" class="form-toggle" data-type="register">צור חשבון</a>
 </div>

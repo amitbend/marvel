@@ -1,29 +1,35 @@
-.features-list {
+.lang-services-nav {
 	margin: 0;
 	padding: 0;
-	&.fa-ul.fa-ul-rtl {
-		margin-right: 1.14285714em;
-		margin-left: 0;
-		padding-right: 0;
-		.fa-li {
-			font-size: 20px !important;
-			right: -2.14285714em;
-			top: 0.3em;
-			left: auto;
-		}
-	}
-	li {
+	.nav-item {
 		font-size: $font-size-smaller;
 		line-height: 1.5;
+		padding: 20px;
+		.nav-link {
+			color: $theme-color-special;
+			&:hover {
+				color: $text-color;
+			}
+			&.active {
+				border: 3px solid $text-color;
+			}
+		}
 	}
 }
 
-
-.features-icons {
-	background: url("../images/home/Mask Group 13.png") 50% 15%;
-	color: $theme-footer-link;
+.lang-courses {
+	.lang-courses-img {
+		background-image: url("../images/language-services/lang-service-courses.png");
+		background-position: center;
+		background-size: cover;
+		flex: 1;
+	}
+	.lang-courses-text {
+		background-color: $theme-color-special;
+		flex: 1;
+		text-align: right;
+	}
 }
-
 
 
 

@@ -1,0 +1,38 @@
+.reg-user-top {
+	background: url("../images/support-us/support-us-top-bg.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 500px;
+	.support-us_heading {
+		color: $theme-footer-link;
+	}
+}
+
+.support-us-features-list {
+	margin: 0;
+	padding: 0;
+	&.fa-ul.fa-ul-rtl {
+		margin-right: 1.14285714em;
+		margin-left: 0;
+		padding-right: 0;
+		.fa-li {
+			font-size: 20px !important;
+			right: -2.14285714em;
+			top: 0.3em;
+			left: auto;
+		}
+	}
+	li {
+		font-size: $font-size-smaller;
+		line-height: 1.5;
+	}
+}
+
+
+
+
+
+
+
+

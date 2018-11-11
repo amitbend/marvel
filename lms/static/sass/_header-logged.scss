@@ -8,6 +8,10 @@
 	display: none;
 }
 
-.nav-item .special {
+.nav-item .theme-main-nav_link.special {
 	color: $theme-color-special;
+	&:hover {
+    	background: $theme-color-special;
+		color: $theme-footer-link;
+	}
 }

@@ -1,6 +1,9 @@
 .lang-services-top {
 	background-color: $theme-color-main;
 	color: $theme-footer-link;
+	h1 {
+		color: $theme-footer-link;
+	}
 }
 .lang-services-nav {
 	margin: 0;
@@ -27,7 +30,7 @@
 }
 
 .lang-courses {
-	.flex-md-equal {min-height: 500px;}
+	.flex-md-equal {min-height: 600px;}
 	.lang-courses-pict {
 		background-image: url("../images/language-services/lang-service-courses.png");
 		background-position: center;
@@ -38,12 +41,13 @@
 		text-align: right;
 		h3 {
 			font-family: muliregular;
+			margin-bottom: 1em;
 		}
 	}
 }
 
 .lang-lectures {
-	.flex-md-equal {min-height: 500px;}
+	.flex-md-equal {min-height: 600px;}
 	.lang-lectures-pict {
 		background-image: url("../images/language-services/lang-service-lectures.png");
 		background-position: center;
@@ -54,12 +58,13 @@
 		text-align: right;
 		h3 {
 			font-family: muliregular;
+			margin-bottom: 1em;
 		}
 	}
 }
 
 .lang-translation {
-	.flex-md-equal {min-height: 500px;}
+	.flex-md-equal {min-height: 600px;}
 	.lang-translation-pict {
 		background-image: url("../images/language-services/lang-service-translation.png");
 		background-position: center;
@@ -70,6 +75,7 @@
 		text-align: right;
 		h3 {
 			font-family: muliregular;
+			margin-bottom: 1em;
 		}
 	}
 }

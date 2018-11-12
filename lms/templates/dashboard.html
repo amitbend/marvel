@@ -136,8 +136,9 @@ from openedx.core.djangolib.markup import HTML, Text
       <%include file="dashboard/common.html"/>
 
 
-<!-- 
-      
+
+    % if False:
+
     <div class="container dashboard" id="dashboard-main">
       <div class="my-courses" id="my-courses">
         <%include file="learner_dashboard/_dashboard_navigation_courses.html"/>
@@ -251,7 +252,8 @@ from openedx.core.djangolib.markup import HTML, Text
           </div>
         </div>
       % endif
-    </div> -->
+    </div>
+    %endif
 </main>
 <!-- 
 <div id="email-settings-modal" class="modal" aria-hidden="true">

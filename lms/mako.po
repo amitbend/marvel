@@ -1522,12 +1522,12 @@ msgstr "ברוך הבא {username}"
 #: lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Enter a Public Display Name:"
-msgstr "הכנס שם קמפוס:"
+msgstr "הכנס שם משתמש:"
 
 #: lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Public Display Name"
-msgstr "שם קמפוס"
+msgstr "שם משתמש"
 
 #: lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
@@ -1632,7 +1632,7 @@ msgstr "ברוכים הבאים {username}! נא הגדר למטה את העדפ
 #: lms/templates/register-shib.html lms/templates/signup_modal.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "Enter a public username:"
-msgstr "הכנס שם קמפוס:"
+msgstr "הכנס שם משתמש:"
 
 #: lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-shib.html

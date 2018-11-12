@@ -8,13 +8,16 @@
 	.community-grid {
 		max-width: 1600px;
 	}
-	.cummunity-grid-box {
+	.community-grid-box {
 		background-color: $theme-footer-link;
 		border-radius: 8px;
 		color: $theme-color-main;
 		h3 {
 			color: $theme-color-main;
 			font-family: 'muliitalic';
+		}
+		.btn-warning {
+			color: $theme-footer-link;
 		}
 	}
 }

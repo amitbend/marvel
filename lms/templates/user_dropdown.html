@@ -21,21 +21,18 @@
                 <img class="profile-picture" src="${profile_image_url}" alt="שם משתמש">
 			</a>
 			<div class="dropdown-menu dropdown-menu-right text-right" id=" Usermenu" aria-labelledby="dropdownMenuLink" tabindex="-1">
-				<a class="dropdown-item" href=${reverse('dashboard')}">לוח בקרה</a>
 				<a class="dropdown-item" href="${reverse('learner_profile', kwargs={'username': self.real_user.username})}">פרופיל</a>
-				<a class="dropdown-item" href="${reverse('account_settings')}">חשבון</a>
+                <a class="dropdown-item" href="${reverse('account_settings')}">חשבון</a>
+                <a class="dropdown-item" href="/help">עזרה</a>
 				<a class="dropdown-item" href="${reverse('logout')}">התנתק</a>
 			</div>
 		</li>
 		<li class="nav-item px-3">
-			<a href="#" class="theme-main-nav_link">יציאה</a>
+            <% username = self.real_user.username %>
+            <p class="theme-main-nav_link">${username}</p>
 		 </li>
-		<li class="nav-item px-3">
-			<a href="${get_online_help_info(online_help_token)['doc_url']}"
-			target="_blank"
-			class="theme-main-nav_link">${_("Help")}</a>
-		</li>
 	</ul>
+    
 
 <!-- <li class="nav-item nav-item-hidden-collapsed">
     <a href="${reverse('dashboard')}" class="menu-title">

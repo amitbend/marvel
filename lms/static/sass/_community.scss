@@ -1,19 +1,28 @@
 .community {
-	background-color: $link-hover;
+	background-color: $theme-color-main-80;
 	color: $theme-footer-link;
+	margin-bottom: -40px;
+	h1, h3 {
+		color: $theme-footer-link;
+	}
+	.community-grid {
+		max-width: 1600px;
+		.cummunity-grid-box {
+			background-color: $theme-footer-link;
+			border-radius: 8px;
+			color: $theme-color-main;
+			h3 {
+				color: $theme-color-main;
+				font-family: 'muliitalic';
+			}
+		}
+	}
 }
 
 .transform-15-deg {
     -ms-transform: rotate(15deg); /* IE 9 */
     -webkit-transform: rotate(15deg); /* Safari */
     transform: rotate(15deg);
-}
-
-
-
-.cummunity-grid-box {
-	background-color: $theme-footer-link;
-	border-radius: 8px;
 }
 
 .btn-disabled {

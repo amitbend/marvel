@@ -7,14 +7,14 @@
 	}
 	.community-grid {
 		max-width: 1600px;
-		.cummunity-grid-box {
-			background-color: $theme-footer-link;
-			border-radius: 8px;
+	}
+	.cummunity-grid-box {
+		background-color: $theme-footer-link;
+		border-radius: 8px;
+		color: $theme-color-main;
+		h3 {
 			color: $theme-color-main;
-			h3 {
-				color: $theme-color-main;
-				font-family: 'muliitalic';
-			}
+			font-family: 'muliitalic';
 		}
 	}
 }

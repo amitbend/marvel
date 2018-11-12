@@ -55,7 +55,7 @@
 		background-size: cover;
 	}
 	.lang-lectures-text {
-		background-color: $warning-color;
+		background-color: transparent;
 		text-align: right;
 		h3 {
 			font-family: muliregular;
@@ -72,7 +72,7 @@
 		background-size: cover;
 	}
 	.lang-translation-text {
-		background-color: $theme-color-main;
+		background-color: $warning-color;
 		text-align: right;
 		h3 {
 			font-family: muliregular;

@@ -16,7 +16,7 @@
 			color: $theme-color-main;
 			font-family: 'muliitalic';
 		}
-		.btn-warning {
+		.btn-warning, .btn-warning:hover, .btn-warning:active, .btn-warning:focus {
 			color: $theme-footer-link;
 		}
 	}

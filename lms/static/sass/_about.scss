@@ -59,13 +59,13 @@
 				width: 185px;
 				height: 185px;
 				border-radius: 50%;
-				padding-bottom: 30px;
+				margin-bottom: 30px;
 				object-fit: cover;
 			}
 			.about-team-content {
 				text-align: center;
 				.heading {
-					font-size: $font-size-h2;
+					font-size: $font-size-h3;
 					line-height: 1;
 				}
 				p, p+p, ul+p, ol+p {

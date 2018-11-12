@@ -44,9 +44,17 @@ h3 {
 	}
 }
 
+@media (min-width: 800px) {
+	.promo-box {
+		height: 700px;
+		min-height: 700px;
+	}
+}
+
 .promo-box_wrapper {
 	padding: 15px;
 }
+.promo-box_holder {align-items: center;}
 
 .theme-btn__invert {
     border-radius: 8px;

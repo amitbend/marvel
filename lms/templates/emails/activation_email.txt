@@ -1,21 +1,21 @@
 <%! from django.utils.translation import ugettext as _ %>
 
+תודה שהצטרפת לקהילה הלומדת של מדרסה!
 
-תודה רבה על הרשמתכם למדרסה!
+כל מה שצריך לעשות כדי להתחיל ללמוד זה ללחוץ על הקישור כדי לאשר את ההרשמה:
 
-כעת תוכלו להתחיל ללמוד ערבית מדוברת בחינם, וליהנות מהקורסים וחומרי הלימוד באתר!
-
-לחצו כאן
 % if is_secure:
 https://${ site }/activate/${ key }
 % else:
 http://${ site }/activate/${ key }
 % endif
- לאשר את הרשמתכם.
+
 
 אל תשכחו גם לעקוב אחרינו בפייסבוק (https://www.facebook.com/madrasafree) ולהיכנס לקבוצת התרגול (https://www.facebook.com/groups/MadrasaFree/).
 
 בִִּ(אל)נַّגַ'אח! בהצלחה!
+
+צוות מדרסה
 
 
 

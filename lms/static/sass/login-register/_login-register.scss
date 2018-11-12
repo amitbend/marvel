@@ -7,8 +7,8 @@
     }
     .form-wrapper {
         form {
-            * {
-                font-family: muliregular !important;
+            span,p {
+                font-family: muliregular;
             }
         }
         .action-primary {

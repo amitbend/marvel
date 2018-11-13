@@ -38,8 +38,7 @@
 		max-width: 1080px;
 		text-align: right;
 		.heading {
-			font-size: $font-size-regular;
-			font-weight: bold;
+			font-size: $font-size-h3;
 			line-height: 1;
 		}
 		p, p+p, ul+p, ol+p {
@@ -66,7 +65,8 @@
 			.about-team-content {
 				text-align: center;
 				.heading {
-					font-size: $font-size-h3;
+					font-size: $font-size-regular;
+					font-weight: bold;
 					line-height: 1;
 				}
 				p, p+p, ul+p, ol+p {

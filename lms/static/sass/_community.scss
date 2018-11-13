@@ -17,6 +17,9 @@
 			color: $theme-color-main;
 			font-family: 'muliitalic';
 		}
+		.community-grid-box-text {
+			min-height: 5em;
+		}
 		.btn-warning {
 			min-width: 160px;
 			color: $theme-footer-link;
@@ -32,6 +35,11 @@
 			background-position: center;
 			h3 {
 				color: $theme-footer-link;
+			}
+			.community-grid-box-img-img {
+				width: 80px;
+				height: auto;
+				margin-bottom: 10px;
 			}
 		}
 	}

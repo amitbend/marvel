@@ -1,5 +1,5 @@
 .about-top {
-	background-color: $theme-color-main;
+	background-color: $theme-color-main-80;
 	color: $theme-footer-link;
 	h1, h3 {
 		color: $theme-footer-link;
@@ -38,7 +38,8 @@
 		max-width: 1080px;
 		text-align: right;
 		.heading {
-			font-size: $font-size-h3;
+			font-size: $font-size-regular;
+			font-weight: bold;
 			line-height: 1;
 		}
 		p, p+p, ul+p, ol+p {

@@ -1,0 +1,37 @@
+.community {
+	background-color: $theme-color-main-80;
+	color: $theme-footer-link;
+	margin-bottom: -40px;
+	h1, h3 {
+		color: $theme-footer-link;
+	}
+	.community-grid {
+		max-width: 1600px;
+	}
+	.community-grid-box {
+		background-color: $theme-footer-link;
+		border-radius: 8px;
+		color: $theme-color-main;
+		h3 {
+			color: $theme-color-main;
+			font-family: 'muliitalic';
+		}
+		.btn-warning, .btn-warning:hover, .btn-warning:active, .btn-warning:focus {
+			color: $theme-footer-link;
+		}
+	}
+}
+
+.transform-10-deg {
+    -ms-transform: rotate(10deg); /* IE 9 */
+    -webkit-transform: rotate(10deg); /* Safari */
+    transform: rotate(10deg);
+}
+
+.btn-disabled {
+	pointer-events: none;
+}
+
+
+
+

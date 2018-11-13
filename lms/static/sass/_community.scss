@@ -12,12 +12,23 @@
 		background-color: $theme-footer-link;
 		border-radius: 8px;
 		color: $theme-color-main;
+		min-height: 420px;
 		h3 {
 			color: $theme-color-main;
 			font-family: 'muliitalic';
 		}
-		.btn-warning, .btn-warning:hover, .btn-warning:active, .btn-warning:focus {
+		.btn-warning {
+			min-width: 160px;
 			color: $theme-footer-link;
+			padding: .375rem .75rem;
+		}
+		.btn-warning:hover, .btn-warning:active, .btn-warning:focus {
+			color: $theme-footer-link;
+		}
+		&.community-grid-box-img {
+			color: $theme-footer-link;
+			background-image: url("../images/home/Mask Group 13.png");
+			background-size: cover;
 		}
 	}
 }

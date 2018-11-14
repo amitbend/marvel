@@ -10,7 +10,7 @@
 		margin: auto;
 	}
 	.support-us-top-phrase {
-		box-shadow: 0 3px 6px #4B4B4B;
+		box-shadow: 0 3px 6px $text-color;
 		padding: 5px 25px;
 		text-align: right;
 		background-color: $theme-footer-link;
@@ -122,6 +122,9 @@
 				background-color: $theme-footer-link;
 				border: 2px solid $theme-color-main;
 				font-family: 'muliregular';
+				border-radius: 2px;
+				font-size: $font-size-regular;
+				height: auto;
 			}
 			lable {
 				font-family: 'muliregular';

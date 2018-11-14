@@ -3,6 +3,11 @@
 
 @import "const";
 
+
+p {
+    font-size:27px !important;
+}
+
 @import 'base/reset';
 @import 'base/variables';
 @import 'base/font_face';

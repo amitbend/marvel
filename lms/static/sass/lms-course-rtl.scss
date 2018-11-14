@@ -3,7 +3,7 @@
 
 @import "const";
 
-p {
+p,li,td,label,select {
     font-size: $font-size-smaller !important;
 }
 h3,h4,h5 {

@@ -62,6 +62,7 @@
 		&.support-us-features-phrase-02 {
 			margin-left: -10px;
 			z-index: 5;
+			max-width: 360px;
 		}
 		&.support-us-features-phrase-03 {
 			margin-top: 20px;
@@ -72,6 +73,7 @@
 			-webkit-transform: rotate(4deg); /* Safari */
 			transform: rotate(4deg);
 			z-index: 3;
+			max-width: 360px;
 		}
 		&.support-us-features-phrase-05 {
 			max-width: 50%;
@@ -125,9 +127,12 @@
 				border-radius: 2px;
 				font-size: $font-size-regular;
 				height: auto;
+				box-shadow: none;
+				font-style: normal;
 			}
-			lable {
+			label {
 				font-family: 'muliregular';
+				font-style: normal;
 			}
 		}
 			
@@ -146,11 +151,24 @@
 				box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 				text-align: center;
 				line-height: 120px;
+				font-size: $font-size-regular;
+				font-weight: bold;
 			}
 			&:checked + .support-us-form-label  {
 				background-color: $theme-color-main-hover;
 			}
 		  }
+		}
+		
+		.custom-control-label::before,
+		.custom-control-label::after {
+			top: .6rem;
+			left: auto;
+			right: -1.5rem;
+		}
+		
+		.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+			background-color: $theme-color-main;
 		}
 	}
 	

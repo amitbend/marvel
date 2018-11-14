@@ -17,16 +17,16 @@ from django.utils.translation import ugettext as _
 <div class="collapse navbar-collapse" id="navbarNavDropdown">
   <ul class="navbar-nav ml-auto">
     <li class="nav-item px-3">
-      <a class="theme-main-nav_link active" href="/about">אודות <span class="sr-only">(current)</span></a>
+      <a class="theme-main-nav_link ${'active' if '/about' == request.path else ''}" href="/about">אודות <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item px-3">
-      <a class="theme-main-nav_link" href="/community">לומדים ביחד</a>
+      <a class="theme-main-nav_link ${'active' if '/community' == request.path else ''}" href="/community">לומדים ביחד</a>
     </li>
     <li class="nav-item px-3">
-      <a class="theme-main-nav_link" href="/supporters">תומכים ושותפים</a>
+      <a class="theme-main-nav_link ${'active' if '/supporters' == request.path else ''}" href="/supporters">תומכים ושותפים</a>
     </li>
     <li class="nav-item px-3">
-      <a class="theme-main-nav_link" href="/language-services">שירותי שפה</a>
+      <a class="theme-main-nav_link ${'active' if '/language-services' == request.path else ''}" href="/language-services">שירותי שפה</a>
     </li>
   </ul>
 </div>

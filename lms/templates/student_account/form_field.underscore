@@ -29,7 +29,7 @@
             <option value="<%= el.value%>"<% if ( el.default ) { %> data-isdefault="true" selected<% } %>><%= el.name %></option>
         <% }); %>
         </select>
-        <% if ( !instructions ) { %> <span class="tip tip-input" id="<%= form %>-<%= name %>-desc"><%= instructions %></span><% } %>
+        <% if ( instructions ) { %> <span class="tip tip-input" id="<%= form %>-<%= name %>-desc"><%= instructions %></span><% } %>
         <% if (supplementalLink && supplementalText) { %>
             <div class="supplemental-link">
                 <a href="<%- supplementalLink %>" target="_blank"><%- supplementalText %></a>
@@ -51,7 +51,7 @@
             <%  });
             } %>
             <% if ( required ) { %> aria-required="true" required<% } %> ></textarea>
-            <% if ( !instructions ) { %> <span class="tip tip-input" id="<%= form %>-<%= name %>-desc"><%= instructions %></span><% } %>
+            <% if ( instructions ) { %> <span class="tip tip-input" id="<%= form %>-<%= name %>-desc"><%= instructions %></span><% } %>
             <% if (supplementalLink && supplementalText) { %>
                 <div class="supplemental-link">
                     <a href="<%- supplementalLink %>" target="_blank"><%- supplementalText %></a>
@@ -88,7 +88,7 @@
                 <% if ( !required && optionalStr ) { %><span class="label-optional"><%= optionalStr %></span><% } %>
             </label>
         <% } %>
-        <% if ( !instructions ) { %> <span class="tip tip-input" id="<%= form %>-<%= name %>-desc"><%= instructions %></span><% } %>
+        <% if ( instructions ) { %> <span class="tip tip-input" id="<%= form %>-<%= name %>-desc"><%= instructions %></span><% } %>
     <% } %>
 
     <% if( form === 'login' && name === 'password' ) { %>

@@ -3,6 +3,10 @@
 
 @import "const";
 
+select,span,div {
+    font-size: $font-size-smallest !important;
+}
+
 p,li,td,label,select {
     font-size: $font-size-smaller !important;
 }

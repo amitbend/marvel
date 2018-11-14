@@ -133,6 +133,7 @@
 			label {
 				font-family: 'muliregular';
 				font-style: normal;
+				font-size: $font-size-regular;
 			}
 		}
 			
@@ -160,15 +161,29 @@
 		  }
 		}
 		
+		.custom-control {
+			padding-right: 1.5rem;
+			padding-left: 0;
+		}
 		.custom-control-label::before,
 		.custom-control-label::after {
-			top: .6rem;
+			top: 0;
 			left: auto;
-			right: -1.5rem;
+			right: -2rem;
+			width: 1.5rem;
+    		height: 1.5rem;
 		}
 		
 		.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
 			background-color: $theme-color-main;
+		}
+		
+		.btn-warning {
+			color: $theme-footer-link;
+			background-image: none;
+			font-size: $font-size-regular;
+			text-shadow: none;
+			border-radius: 8px;
 		}
 	}
 	

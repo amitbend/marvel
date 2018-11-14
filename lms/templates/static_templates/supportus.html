@@ -1,67 +1,34 @@
 <%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
 
-<%!
-from django.urls import reverse
-from django.utils.translation import ugettext as _
+<%block name="pagetitle">תמכו בנו</%block>
 
-from openedx.core.djangolib.js_utils import js_escaped_string, dump_js_escaped_json
-%>
-
-<%inherit file="../main.html"/>
-<%namespace file='../main.html' import="login_query"/>
-<%namespace name='static' file='../static_content.html'/>
-
-<%block name="title">
-    <title>
-        ${_("Contact {platform_name} Support").format(platform_name=platform_name)}
-    </title>
-</%block>
-
-<%block name="head_extra">
-    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</%block>
-
-<%block name="body">
-
-    <div id="root" class="container">
-    </div>
-
-    <%static:webpack entry="SingleSupportForm">
-        var context = {
-            'platformName': "madrasa",
-            'marketingUrl': "admin@madrasafree.com",
-            'loginQuery': "${login_query() | n, js_escaped_string}",
-            'dashboardUrl': "/dashboard",
-            'homepageUrl': "/",
-            'submitFormUrl': "/someproxy",
-            'customFields': ${custom_fields | n, dump_js_escaped_json},
-            'tags': ${tags | n, dump_js_escaped_json},
-            'supportEmail': "admin@madrasafree.com",
-        }
-
-        % if user.is_authenticated:
-            context['user'] = {
-                'username': "${user.username | n, js_escaped_string}",
-                'email': "${user.email | n, js_escaped_string}",
-                'course_id': "${course_id | n, js_escaped_string}"
+<main id="main" aria-label="Content" tabindex="-1" class="content-wrapper">
+	<div class="content-wrapper">
+    <!--<section class="container about">
+        <h1>תמכו בנו</h1>
+        <p>עמוד זה יבנה בקרוב, עד עליית המערכת החדשה</p>
+        
+        <div class="resp-container">
+            <iframe width="100%" height="100%" scrolling="no" frameborder="0"  class="resp-iframe" src="https://www.madrasafree.net/supportus" gesture="media"  allow="encrypted-media" seamless allowfullscreen></iframe>
+        </div>
+        <style type="text/css">
+            body, html
+            {
+                margin: 0; padding: 0; height: 100%; overflow: hidden;
             }
 
-            % if user_enrollments:
-                enrollments = []
-                % for enrollment in user_enrollments:
-                    % if enrollment.course_overview:
-                        enrollments.push({
-                            'course_id': "${enrollment.course_overview.id | n, js_escaped_string}",
-                            'course_name': "${enrollment.course_overview.display_name | n, js_escaped_string}",
-                        })
-                    % endif
-                %endfor
-                context['user']['enrollments'] = enrollments
+            iframe
+            {
+                position:absolute; left: 0; right: 0; bottom: 0; top: 0px; 
+            }
+            .nothing{
+                style="border: 0px solid black;width: 100%;height: 100%;overflow:hidden;"
+            }
+        </style>
+    </section>-->
+	
 
-            % endif
-
-        % endif
-
-        new SingleSupportForm(context);
-    </%static:webpack>
-</%block>
+	</div>
+</main>

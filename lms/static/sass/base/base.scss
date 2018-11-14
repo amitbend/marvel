@@ -6,7 +6,7 @@
 // }
 
 html, body {
-    font-family: $sans-serif;
+    font-family: 'muliregular';
     font-size: $font-size-base;
     font-style: normal;
     line-height: 1em;
@@ -40,7 +40,7 @@ html, body {
   
   h2 {
     color: $lighter-base-font-color;
-    font: normal 1.2em/1.2em $serif;
+    font: normal 1.2em/1.2em 'muliregular';
     margin-bottom: ($baseline*0.75);
     -webkit-font-smoothing: antialiased;
   }

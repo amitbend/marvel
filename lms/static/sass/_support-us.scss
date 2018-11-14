@@ -14,7 +14,8 @@
 		padding: 5px 25px;
 		text-align: right;
 		background-color: $theme-footer-link;
-		font-size: 32px;
+		font-size: 36px;
+		line-height: 1;
 		font-weight: bold;
 		width: fit-content;
 		margin-top: 5px;
@@ -190,7 +191,17 @@
 	
 }
 
-
+.support-us-bottom-phrase {
+	box-shadow: 0 3px 6px $text-color;
+	padding: 5px 25px;
+	text-align: right;
+	background-color: $theme-footer-link;
+	font-size: $font-size-h3;
+	line-height: 1;
+	font-weight: bold;
+	width: fit-content;
+	color: $theme-color-special;
+}
 
 
 

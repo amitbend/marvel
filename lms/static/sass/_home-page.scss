@@ -65,7 +65,7 @@ h3 {
 	text-shadow: none;
 	border-radius: 8px;
 	box-shadow: none;
-	&:hover {
+	&:hover, &:active {
 		color: $theme-footer-link !important;
 		background: #d39e00;
 		border-color: #d39e00;
@@ -128,6 +128,8 @@ h3 {
 
 .features-icons {
 	background: url("../images/home/Mask Group 13.png") 50% 15%;
+	background-repeat: no-repeat;
+	background-size: cover;
 	color: $theme-footer-link;
 	min-height: 500px;
 	h1, h2, h3, h4, h5, h6 {

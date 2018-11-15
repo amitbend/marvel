@@ -5,99 +5,35 @@
 <%block name="pagetitle">צור קשר</%block>
 
 <main id="main" aria-label="Content" tabindex="-1">
-    <div class="content-wrapper">
-		<!--<section class="container about">
-        <h1>צור קשר</h1>
-        <p>עמוד זה יבנה בקרוב, עד עליית המערכת החדשה</p>
-        <iframe src="https://calendar.google.com/calendar/embed?title=%D7%9E%D7%93%D7%A8%D7%A1%D7%94&amp;height=600&amp;wkst=1&amp;hl=iw&amp;bgcolor=%23FFFFFF&amp;src=en.jewish%23holiday%40group.v.calendar.google.com&amp;color=%230F4B38&amp;ctz=Asia%2FJerusalem" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-    </section>-->
-		<!-- https://icredit.rivhit.co.il/payment/PaymentFullPage.aspx?GroupId=2147d08a-4e8e-4d59-b5ad-306d0e652d9f -->
-		<section class="support-us-top">
-			<div class="container p-3">
-				<div class="d-md-flex align-items-center">
-					<img src="/static/marvel/images/support-us/support-us-top-logo.png" alt="לוגו מדרסה">
-					<h1 class="support-us_heading text-md-right">
-						מדרסה קיים בזכות תומכים כמוך. הצטרפ.י למהפכה!
-					</h1>
-				</div>
-
-			</div>
-		</section>
-
-		<section class="support-us-features">
-			<div class="container text-right">
-				<div class="row">
-				  <div class="col-md-6">
-					<div class="embed-responsive embed-responsive-16by9">
-					  <iframe class="embed-responsive-item" src="//www.youtube.com/embed/9Xbwkob5iMY?wmode=transparent&amp;autoplay=0&amp;theme=dark&amp;controls=1&amp;autohide=0&amp;loop=0&amp;showinfo=0&amp;rel=0&amp;playlist=false&amp;enablejsapi=0" allowfullscreen></iframe>
-					</div>
-				  </div>
-				  <div class="col-md-6">
-					  <ul class="support-us-features-list fa-ul fa-ul-rtl">
-						<li><i class="fa-li fa fa-arrow-left"></i>קורס אינטראטיבי עם ציונים ומדד התקדמות </li>
-						<li><i class="fa-li fa fa-arrow-left"></i>מעל 60 סרטוני לימוד חדשים</li>
-						<li><i class="fa-li fa fa-arrow-left"></i>מעל 1000 תרגילים ומשחקים</li>
-						<li><i class="fa-li fa fa-arrow-left"></i>פינות העשרה ודקדוק</li>
-						<li><i class="fa-li fa fa-arrow-left"></i>דיונים עם תלמידים ומורים</li>
-						<li><i class="fa-li fa fa-arrow-left"></i>ספרית תכני מדרסה המלאה</li>
-						<li><i class="fa-li fa fa-arrow-left"></i>גישה מכל מכשיר</li>
-					  </ul>
-				  </div>
-				</div>
-			</div>
-		</section>
-		
-		<section class="support-us-form">
-			<div class="container text-center support-us-form-wrap">
-				<h3>מלא.י את הפרטים כאן למטה והפוך.י לחלק מקהילת התומכים שלנו!</h3>
+	<section class="lang-services-form">
+			<form method="POST" action="https://formspree.io/admin@madrasafree.com">
+        <div class="container text-center p-5">
+			<div class="lang-services-form-wrap p-5">
+				<h3 class="mb-4">יצירת קשר<br>
+					מלא.י את הטופס ונחזור אלייך בהקדם!</h3>
 				<form>
+					<input type="hidden" name="_next" value="https://madrasafree.com/thanks" />
+					<input type="hidden" name="_subject" value="פנייה דרך טופס יצירת קשר  " />
 					<div class="form-group">
-						<label for="support-us-form-name" class="sr-only">שם</label>
-						<input type="text" class="form-control" id="support-us-form-name" placeholder="שם">
+						<label for="lang-services-form-name" class="sr-only">שם</label>
+						<input type="text" class="form-control"  name="username" id="lang-services-form-name" placeholder="שם">
 					</div>
 					<div class="form-group">
-						<label for="support-us-form-email" class="sr-only">מייל</label>
-						<input type="email" class="form-control" id="support-us-form-email" placeholder="מייל">
+						<label for="lang-services-form-email" class="sr-only">מייל</label>
+						<input type="email" name="email" class="form-control" id="lang-services-form-email" placeholder="מייל">
 					</div>
 					<div class="form-group">
-						<label for="support-us-form-city" class="sr-only">עיר</label>
-						<input type="text" class="form-control" id="support-us-form-city" placeholder="עיר">
+						<label for="lang-services-form-tel" class="sr-only">טלפון</label>
+						<input type="tel" class="form-control"  name="phone" id="lang-services-form-tel" placeholder="טלפון">
 					</div>
 					<div class="form-group">
-						<label for="support-us-form-tel" class="sr-only">מספר נייד</label>
-						<input type="tel" class="form-control" id="support-us-form-tel" placeholder="מספר נייד">
+						<label for="lang-services-form-textarea" class="sr-only">איך נוכל לעזור?</label>
+						<textarea name="message" class="form-control" id="lang-services-form-textarea" rows="3" placeholder="איך נוכל לעזור?"></textarea>
 					</div>
-
-					<div class="form-group">
-						<label for="exampleFormControlSelect1">אופן ההשתתפות:</label>
-						<select class="form-control" id="exampleFormControlSelect1">
-						  <option>1</option>
-						  <option>2</option>
-						  <option>3</option>
-						  <option>4</option>
-						  <option>5</option>
-						</select>
-					</div>
-
-					<div class="form-group">
-						אופן ההשתתפות:
-						<div class="custom-control custom-radio custom-control-inline">
-						  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-						  <label class="custom-control-label" for="customRadioInline1">Toggle this custom radio</label>
-						</div>
-						<div class="custom-control custom-radio custom-control-inline">
-						  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-						  <label class="custom-control-label" for="customRadioInline2">Or toggle this other custom radio</label>
-						</div>
-					</div>
+					<button class="theme-btn theme-btn__invert type="submit">שלח</button>
 				</form>
 			</div>
-		</section>
-		
-		<section>
-			<div class="container text-center">
-				חזרה לעמוד הבית
-			</div>
-		</section>
-	</div>
+		</div>
+	</form>
+	</section>
 </main>

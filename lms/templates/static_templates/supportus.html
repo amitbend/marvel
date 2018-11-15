@@ -223,9 +223,10 @@
 		}
 
 	});
-	$("#submit").click(function() {
+	$("#submit").click(function(e) {
 			var val = $('input[name=sum]:checked').val();
 			window.open(val);
+			e.preventDefault();
 		});
 </script>
 </main>

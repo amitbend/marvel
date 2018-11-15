@@ -89,59 +89,59 @@
 									<label for="support-us-form-tel" class="sr-only">מספר נייד</label>
 									<input type="tel" class="form-control" id="support-us-form-tel" placeholder="מספר נייד">
 								</div>
-								<div class="form-group w-50 mx-auto mt-5">
-									<select class="form-control" id="exampleFormControlSelect1">
-									  <option>תשלום חד פעמי</option>
-									  <option>2</option>
-									  <option>3</option>
-									  <option>4</option>
-									  <option>5</option>
+								<div class="form-group w-50 mx-auto mt-5" >
+									<select class="form-control" id="donation-type">
+										<option value="subscription">תרומה חודשית</option>
+									  <option value="one-time">תשלום חד פעמי</option>
 									</select>
 								</div>
 							</div>
 
 							<div class="col-md-6">
-								<div class="form-group">
-									<div class="support-us-form-radios">
-									  <div class="custom-control custom-control-inline">
-										<input class="support-us-form-input" id="sum-50" name="sum" type="radio" checked>
-										<label class="support-us-form-label" for="sum-50">
-										   ₪ 50
-										</label>
-									  </div>
-
-									  <div class="custom-control custom-control-inline">
-										<input class="support-us-form-input" id="sum-100" name="sum" type="radio">
-										<label class="support-us-form-label" for="sum-100">
-										   ₪ 100
-										</label>
-									  </div>
-
-									  <div class="custom-control custom-control-inline">
-										<input class="support-us-form-input" id="sum-250" name="sum" type="radio">
-										<label class="support-us-form-label" for="sum-250">
-										   ₪ 250
-										</label>
-									  </div>
-									</div>
+								<div id="amount">
+										<div class="form-group">
+												<div class="support-us-form-radios">
+													<div class="custom-control custom-control-inline">
+													<input class="support-us-form-input" id="sum-50" name="sum" type="radio" checked>
+													<label class="support-us-form-label" for="sum-50">
+														 ₪ 50
+													</label>
+													</div>
+			
+													<div class="custom-control custom-control-inline">
+													<input class="support-us-form-input" id="sum-100" name="sum" type="radio">
+													<label class="support-us-form-label" for="sum-100">
+														 ₪ 100
+													</label>
+													</div>
+			
+													<div class="custom-control custom-control-inline">
+													<input class="support-us-form-input" id="sum-250" name="sum" type="radio">
+													<label class="support-us-form-label" for="sum-250">
+														 ₪ 250
+													</label>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="support-us-form-radios">
+													<div class="custom-control custom-control-inline">
+													<input class="support-us-form-input" id="sum-500" name="sum" type="radio">
+													<label class="support-us-form-label" for="sum-500">
+														₪ 500
+													</label>
+													</div>
+			
+													<div class="custom-control custom-control-inline">
+													<input class="support-us-form-input" id="sum-other" name="sum" type="radio">
+													<label class="support-us-form-label" for="sum-other">
+														סכום אחר
+													</label>
+													</div>
+												</div>
+											</div>
 								</div>
-								<div class="form-group">
-									<div class="support-us-form-radios">
-									  <div class="custom-control custom-control-inline">
-										<input class="support-us-form-input" id="sum-500" name="sum" type="radio">
-										<label class="support-us-form-label" for="sum-500">
-										  ₪ 500
-										</label>
-									  </div>
 
-									  <div class="custom-control custom-control-inline">
-										<input class="support-us-form-input" id="sum-other" name="sum" type="radio">
-										<label class="support-us-form-label" for="sum-other">
-										  סכום אחר
-										</label>
-									  </div>
-									</div>
-								</div>
 
 								<div class="form-row align-items-center">
 									<div class="col-auto my-1">
@@ -168,4 +168,13 @@
 		</section>
 
 	</div>
+	<script>
+	$('#donation-type').on('change', function() {
+  	alert( this.value );
+		$("#submit").click(function() {
+			var val = $('input[name=sum]:checked').val();
+			alert(val);
+		});
+	});
+</script>
 </main>

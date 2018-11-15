@@ -223,7 +223,7 @@
 		}
 
 	});
-	$("#submit").click(function(e) {
+	$("#submit").submit(function(e) {
 			var val = $('input[name=sum]:checked').val();
 			window.open(val);
 			e.preventDefault();

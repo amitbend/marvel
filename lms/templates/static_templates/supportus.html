@@ -189,7 +189,7 @@
 								<div class="form-row align-items-center">
 									<div class="col-auto my-1">
 									  <div class="custom-control custom-checkbox mr-sm-2">
-										<input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+										<input type="checkbox" class="custom-control-input" id="customControlAutosizing" required>
 										<label class="custom-control-label" for="customControlAutosizing"> קראתי ואני מאשר את <a href="/tos">התקנון</a></label>
 									  </div>
 									</div>
@@ -223,7 +223,7 @@
 		}
 
 	});
-	$("#submit").submit(function(e) {
+	$("#submit").click(function(e) {
 			var val = $('input[name=sum]:checked').val();
 			window.open(val);
 			e.preventDefault();

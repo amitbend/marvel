@@ -42,40 +42,14 @@
 	}	
 }
 
-.about-team {
-	.about-team-wrap {
-		.about-team-item {
-			padding: 15px;
-			flex: 1 0 0%;
-			max-width: 25%;
-			.about-team-img {
-				width: 185px;
-				height: 185px;
-				border-radius: 50%;
-				margin-bottom: 30px;
-				object-fit: cover;
-			}
-			.about-team-content {
-				text-align: center;
-				.heading {
-					font-size: $font-size-regular;
-					font-weight: bold;
-					line-height: 1;
-				}
-				p, p+p, ul+p, ol+p {
-					margin: 0;
-					font-size: $font-size-smaller;
-				}
-			}
-		}
+.supporters-shir-btns {
+	.theme-btn,
+	.theme-btn-special {
+		font-size: $font-size-smaller;
+		padding: 5px 25px;
+		line-height: 1;
 	}
 }
 
-.about-thanks {
-	p {
-		margin: 0;
-		font-size: $font-size-smaller;
-	}
-}
 
 

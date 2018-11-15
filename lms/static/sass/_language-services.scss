@@ -108,7 +108,7 @@
 		border-radius: 8px;
 		box-shadow: none;
 		min-width: 160px;
-		&:hover {
+		&:hover, &:active {
 			color: $theme-footer-link !important;
 			background: #d39e00;
 			border-color: #d39e00;

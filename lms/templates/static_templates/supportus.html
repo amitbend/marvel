@@ -98,7 +98,50 @@
 							</div>
 
 							<div class="col-md-6">
-								<div id="amount">
+								<div id="amount1">
+										<div class="form-group">
+												<div class="support-us-form-radios">
+													<div class="custom-control custom-control-inline">
+													<input class="support-us-form-input" id="sum-50" name="sum" type="radio" value="50" checked>
+													<label class="support-us-form-label" for="sum-50">
+														 ₪ 50
+													</label>
+													</div>
+			
+													<div class="custom-control custom-control-inline">
+													<input class="support-us-form-input" id="sum-100" name="sum" type="radio" value="100">
+													<label class="support-us-form-label" for="sum-100">
+														 ₪ 100
+													</label>
+													</div>
+			
+													<div class="custom-control custom-control-inline">
+													<input class="support-us-form-input" id="sum-250" name="sum" type="radio" value="250">
+													<label class="support-us-form-label" for="sum-250">
+														 ₪ 250
+													</label>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="support-us-form-radios">
+													<div class="custom-control custom-control-inline">
+													<input class="support-us-form-input" id="sum-500" name="sum" type="radio" value="500">
+													<label class="support-us-form-label" for="sum-500">
+														₪ 500
+													</label>
+													</div>
+			
+													<div class="custom-control custom-control-inline">
+													<input class="support-us-form-input" id="sum-other" name="sum" type="radio">
+													<label class="support-us-form-label" for="sum-other">
+														סכום אחר
+													</label>
+													</div>
+												</div>
+											</div>
+								</div>
+								<div id="amount2" style="display:none;">
 										<div class="form-group">
 												<div class="support-us-form-radios">
 													<div class="custom-control custom-control-inline">
@@ -171,7 +214,15 @@
 	<script>
 	$('#donation-type').on('change', function() {
   	alert( this.value );
-		$('input[name=sum]').val(this.value * 2);
+		if (this.value == '1'){
+			$('#amount2').show();
+		  $('#amount1').hide();
+		}
+		else {
+			$('#amount1').show();
+		  $('#amount2').hide();
+		}
+
 	});
 	$("#submit").click(function() {
 			var val = $('input[name=sum]:checked').val();

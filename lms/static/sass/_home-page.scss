@@ -74,10 +74,10 @@ h3 {
 	}
 }
 .navbar-nav .btn-warning {
-	font-size: $font-size-smaller;
+	font-size: 20px;
 	color: $text-color;
 	&:hover, &:active {
-		color: $text-color;
+		color: $text-color!important;
 	}
 }
 

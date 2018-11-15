@@ -171,6 +171,10 @@
 	<script>
 	$('#donation-type').on('change', function() {
   	alert( this.value );
+		$("#submit").click(function() {
+			var val = $('input[name=sum]:checked').val();
+			alert(val);
+		});
 	});
 </script>
 </main>

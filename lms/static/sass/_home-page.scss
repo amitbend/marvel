@@ -61,7 +61,7 @@ h3 {
 .btn-warning {
 	color: $theme-footer-link;
 	background-image: none;
-	font-size: $font-size-regular;
+	font-size: $font-size-smaller;
 	text-shadow: none;
 	border-radius: 8px;
 	box-shadow: none;
@@ -71,6 +71,13 @@ h3 {
 		border-color: #d39e00;
 		text-decoration: none;
 		background-image: none;
+	}
+}
+.navbar-nav .btn-warning {
+	font-size: $font-size-smaller;
+	color: $text-color;
+	&:hover, &:active {
+		color: $text-color;
 	}
 }
 

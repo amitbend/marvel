@@ -185,6 +185,9 @@
 			text-shadow: none;
 			border-radius: 8px;
 			box-shadow: none;
+			&:hover {
+				background: #d39e00;
+			}
 		}
 	}
 	

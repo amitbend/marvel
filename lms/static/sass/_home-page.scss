@@ -58,6 +58,21 @@ h3 {
 	}
 }
 
+.btn-warning {
+	color: $theme-footer-link;
+	background-image: none;
+	font-size: $font-size-regular;
+	text-shadow: none;
+	border-radius: 8px;
+	box-shadow: none;
+	&:hover {
+		color: $theme-footer-link !important;
+		background: #d39e00;
+		border-color: #d39e00;
+		text-decoration: none;
+	}
+}
+
 @media (min-width: 800px) {
 	.promo-box {
 		height: 700px;

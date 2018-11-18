@@ -70,7 +70,7 @@
 				<h3 class="theme-color-special mb-3">אף אחד לא יעשה את זה בשבילנו - מצטרפים ולוקחים אחריות על החברה שלנו.</h3>
 				<i class="theme-color-special fa fa- fa-arrow-down fa-2x"></i>
 				<div class="support-us-form-in mt-4">
-					<form action="" id="donation-form">
+					<form id="donation-form">
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
@@ -194,7 +194,7 @@
 									  </div>
 									</div>
 									<div class="col text-left my-1">
-									  <button id="submit" type="submit" class="btn btn-warning"> תשלום מאובטח </button>
+									  <button id="submit" type="button" class="btn btn-warning"> תשלום מאובטח </button>
 									</div>
 								</div>
 								<div class="text-left my-1">
@@ -226,7 +226,9 @@
 	$("#submit").click(function(e) {
 		if ($("#donation-form").valid()){
 			var val = $('input[name=sum]:checked').val();
-			window.location.href(val);
+			console.log(val);
+			$("#donation-form").action = val;
+			window.location.replace(val);
 			return false;
 		}
 		return false;

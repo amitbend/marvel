@@ -224,6 +224,7 @@
 
 	});
 	$("#submit").click(function(e) {
+		$("#donation-form").validate();
 		if ($("#donation-form").valid()){
 			var val = $('input[name=sum]:checked').val();
 			console.log(val);

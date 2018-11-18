@@ -226,7 +226,7 @@
 	$("#submit").click(function(e) {
 		if ($("#donation-form").valid()){
 			var val = $('input[name=sum]:checked').val();
-			window.location.replace(val);
+			window.location.href(val);
 			return false;
 		}
 		return false;

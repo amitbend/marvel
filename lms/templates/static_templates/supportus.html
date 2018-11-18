@@ -226,8 +226,8 @@
 	$("#submit").click(function(e) {
 		if ($("#donation-form").valid()){
 			var val = $('input[name=sum]:checked').val();
-			window.open('',val);
-			// return true
+			window.open(val,'_blank');
+			return true
 		}
 		return false;
 	});

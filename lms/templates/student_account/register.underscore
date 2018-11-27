@@ -5,7 +5,9 @@
     <span class="text">כבר נרשמת? </span>
     <a href="#login" class="form-toggle" data-type="login">התחבר</a>
 </div>
-
+<div class="text-center">
+   <span class="tip ">האתר שלנו פתוח וחינמי לחלוטין. ההרשמה מתבצעת לצורך כניסה לקורס ומעקב אישי אחר ההתקדמות והלמידה!</span>
+</div>
 <h2 class="text-right"> צור חשבון חדש </h2>
 
 <form id="register" class="register-form text-right" autocomplete="off" tabindex="-1" method="POST">

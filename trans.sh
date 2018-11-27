@@ -1,1 +1,1 @@
-sudo scp -r $(pwd)/lms/mako.po madrasateacher@52.233.184.92:/opt/bitnami/apps/edx/edx-platform/conf/locale/he/LC_MESSAGES
+sudo scp -r $(pwd)/lms/*.po madrasateacher@52.233.184.92:/opt/bitnami/apps/edx/edx-platform/conf/locale/he/LC_MESSAGES

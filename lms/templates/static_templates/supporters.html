@@ -3,7 +3,22 @@
 <%inherit file="../main.html" />
 <%namespace name='static' file='../static_content.html'/>
 
-<head>
+<%block name="headextra">
+
+<title> תומכים ושותפים | Supporters</title>
+<!-- Search Engine -->
+<meta name="description" content="מדרסה קיים בזכות שותפים מדהימים שחולקים את החזון שלנו. זה המקום לומר להם תודה.">
+<meta name="image" content="https://s3.eu-west-3.amazonaws.com/madrasa-site-images/LogoMadrasaConv1.jpg">
+<!-- Schema.org for Google -->
+<meta itemprop="name" content=" תומכים ושותפים | Supporters">
+<meta itemprop="description" content="מדרסה קיים בזכות שותפים מדהימים שחולקים את החזון שלנו. זה המקום לומר להם תודה.">
+<meta itemprop="image" content="https://s3.eu-west-3.amazonaws.com/madrasa-site-images/LogoMadrasaConv1.jpg">
+<!-- Open Graph general (Facebook, Pinterest & Google+) -->
+<meta name="og:title" content=" תומכים ושותפים | Supporters">
+<meta name="og:description" content="מדרסה קיים בזכות שותפים מדהימים שחולקים את החזון שלנו. זה המקום לומר להם תודה.">
+<meta name="og:image" content="https://s3.eu-west-3.amazonaws.com/madrasa-site-images/LogoMadrasaConv1.jpg">
+
+
     <!-- <link rel="manifest" href="${static.url('js/notifications/manifest.json')}" /> -->
     <link rel="manifest" href="/manifest.json" />
 
@@ -16,7 +31,8 @@
         });
       });
     </script>
-</head>
+</%block>
+
 
 <main id="main" aria-label="Content" tabindex="-1">
     <div class="content-wrapper">

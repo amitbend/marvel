@@ -20,10 +20,23 @@ from openedx.core.djangolib.markup import HTML, Text
 %>
 
 
-<%block name="pagetitle">עמוד הבית - מדרסה</%block>
+<%block name="pagetitle"> עמוד הבית - מדרסה</%block>
 <%block name="bodyclass">view-dashboard is-authenticated</%block>
 
+<%block name="headextra">
+<!-- Search Engine -->
+<meta name="description" content="לימוד ערבית מדוברת בחינם. באתר תוכלו למצוא קורסים פתוחים, ספרית תכנים ענפה, מילון, וחשוב לא פחות - להתחבר לקהילה אדירה של לומדים לתקשר - ברשתות החברתיות ובמפגשי תרגול פתוחים">
+<meta name="image" content="https://s3.eu-west-3.amazonaws.com/madrasa-site-images/LogoMadrasaConv1.jpg">
+<!-- Schema.org for Google -->
+<meta itemprop="name" content="מדרסה - לומדים לתקשר | Madrasa - Learning to Communicate">
+<meta itemprop="description" content="לימוד ערבית מדוברת בחינם. באתר תוכלו למצוא קורסים פתוחים, ספרית תכנים ענפה, מילון, וחשוב לא פחות - להתחבר לקהילה אדירה של לומדים לתקשר - ברשתות החברתיות ובמפגשי תרגול פתוחים">
+<meta itemprop="image" content="https://s3.eu-west-3.amazonaws.com/madrasa-site-images/LogoMadrasaConv1.jpg">
+<!-- Open Graph general (Facebook, Pinterest & Google+) -->
+<meta name="og:title" content="מדרסה - לומדים לתקשר | Madrasa - Learning to Communicate">
+<meta name="og:description" content="לימוד ערבית מדוברת בחינם. באתר תוכלו למצוא קורסים פתוחים, ספרית תכנים ענפה, מילון, וחשוב לא פחות - להתחבר לקהילה אדירה של לומדים לתקשר - ברשתות החברתיות ובמפגשי תרגול פתוחים">
+<meta name="og:image" content="https://s3.eu-west-3.amazonaws.com/madrasa-site-images/LogoMadrasaConv1.jpg">
 
+</%block>
 
 
 

@@ -2,7 +2,24 @@
 <%! from django.utils.translation import ugettext as _ %>
 <%inherit file="../main.html" />
 
-<%block name="pagetitle">${_("Community")}</%block>
+<%block name="pagetitle">לומדים ביחד | Learning Together</%block>
+
+<%block name="headextra">
+
+<title>לומדים ביחד | Learning Together</title>
+<!-- Search Engine -->
+<meta name="description" content="בשביל ללמוד לתקשר צריך קודם כל… לתקשר… מוזמנים להצטרף לקהילה שלנו בפייסבוק, לערוצי התוכן שלנו בווטסאפ ובטלגרם, לניוזלטר חודשי ועוד ועוד!">
+<meta name="image" content="https://s3.eu-west-3.amazonaws.com/madrasa-site-images/LogoMadrasaConv1.jpg">
+<!-- Schema.org for Google -->
+<meta itemprop="name" content="לומדים ביחד | Learning Together">
+<meta itemprop="description" content="בשביל ללמוד לתקשר צריך קודם כל… לתקשר… מוזמנים להצטרף לקהילה שלנו בפייסבוק, לערוצי התוכן שלנו בווטסאפ ובטלגרם, לניוזלטר חודשי ועוד ועוד!">
+<meta itemprop="image" content="https://s3.eu-west-3.amazonaws.com/madrasa-site-images/LogoMadrasaConv1.jpg">
+<!-- Open Graph general (Facebook, Pinterest & Google+) -->
+<meta name="og:title" content="לומדים ביחד | Learning Together">
+<meta name="og:description" content="בשביל ללמוד לתקשר צריך קודם כל… לתקשר… מוזמנים להצטרף לקהילה שלנו בפייסבוק, לערוצי התוכן שלנו בווטסאפ ובטלגרם, לניוזלטר חודשי ועוד ועוד!">
+<meta name="og:image" content="https://s3.eu-west-3.amazonaws.com/madrasa-site-images/LogoMadrasaConv1.jpg">
+
+</%block>
 
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="community">

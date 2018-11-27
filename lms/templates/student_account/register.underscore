@@ -6,7 +6,7 @@
     <a href="#login" class="form-toggle" data-type="login">התחבר</a>
 </div>
 <div class="text-center">
-   <span class="tip ">האתר שלנו פתוח וחינמי לחלוטין. ההרשמה מתבצעת לצורך כניסה לקורס ומעקב אישי אחר ההתקדמות והלמידה!</span>
+   <p><small class="tip">האתר שלנו פתוח וחינמי לחלוטין. ההרשמה מתבצעת לצורך כניסה לקורס ומעקב אישי אחר ההתקדמות והלמידה!</small></p> 
 </div>
 <h2 class="text-right"> צור חשבון חדש </h2>
 

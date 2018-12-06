@@ -41,16 +41,28 @@ site_status_msg = get_site_status_msg(course_id)
 %>
 % if site_status_msg:
 <div class="site-status">
-  <div class="inner-wrapper">
-    <span class="icon fa fa-warning"></span>
-    <p>${site_status_msg}</p>
-  </div>
+    <div class="inner-wrapper">
+        <span class="icon fa fa-warning"></span>
+        <p>${site_status_msg}</p>
+    </div>
 </div>
 % endif
 </%block>
 
 
 <nav class="navbar navbar-expand-lg">
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            He
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/">He</a>
+                <a class="dropdown-item" href="/about-en">En</a>
+                <a class="dropdown-item" href="/about-ar">Ar</a>
+            </div>
+        </a>
+    </li>
+
     <%include file="bootstrap/navbar-logo-header.html" args="online_help_token=online_help_token"/>
     % if user.is_authenticated():
       <%include file="bootstrap/navbar-authenticated.html" args="online_help_token=online_help_token"/>

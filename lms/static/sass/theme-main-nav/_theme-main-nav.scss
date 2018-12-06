@@ -50,6 +50,9 @@
         .special {
             color: $theme-color-special !important;
         }
+        .small{
+            font-size: $font-size-smallest !important;
+        }
     }
     &_item {
         width: 100%;

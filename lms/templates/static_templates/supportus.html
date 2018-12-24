@@ -86,7 +86,7 @@
 				<h3 class="theme-color-special mb-3">אף אחד לא יעשה את זה בשבילנו - מצטרפים ולוקחים אחריות על החברה שלנו.</h3>
 				<i class="theme-color-special fa fa- fa-arrow-down fa-2x"></i>
 				<div class="support-us-form-in mt-4">
-					<form id="donation-form" action="" onSubmit="return afterValidate()">
+					<form id="donation-form" action="" >
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
@@ -240,9 +240,9 @@
 
 	});
 	function afterValidate(){
-		$("#donation-form").action = val;
-		window.location.replace(val);
-		return false;
+		// $("#donation-form").action = val;
+		// window.location.replace(val);
+		// return false;
 	}
 	// $("#submit").click(function(e) {
 
@@ -253,5 +253,16 @@
 	// 		return false;
 		
 	// });
+
+	$('#submit').on('click', function(event) {
+    var isvalidate = $("#donation-form")[0].checkValidity();
+    if (isvalidate) {
+      event.preventDefault();
+	  $("#donation-form").action = val;
+	  window.location.replace(val);
+	  return false;
+      // HERE YOU CAN PUT YOUR AJAX CALL
+    }
+  });
 </script>
 </main>

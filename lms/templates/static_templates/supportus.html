@@ -258,6 +258,7 @@
     var isvalidate = $("#donation-form")[0].checkValidity();
     if (isvalidate) {
       event.preventDefault();
+	  var val = $('input[name=sum]:checked').val();
 	  $("#donation-form").action = val;
 	  window.location.replace(val);
 	  return false;

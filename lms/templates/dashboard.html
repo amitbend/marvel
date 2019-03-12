@@ -56,22 +56,37 @@ from openedx.core.djangolib.markup import HTML, Text
   <script>
     let courseId = "course-v1:madrasa+course1+2018";
     let username = "${user}";
-    fetch("https://madrasafree.com/api/grades/v0/course_grade/"  + courseId + "/users/?username="+ username).then((response)=>{
-      if (!response.ok) throw('bad response');
-      return response.json();
-    })
-    .then((grade)=>{
-      grade = grade[0];
-      setProgress(grade && grade.percent ? grade.percent*100 : 1);
-    })
-    .catch((err)=>{
-      setProgress(1);
-    })
+    // fetch("https://madrasafree.com/api/grades/v0/course_grade/"  + courseId + "/users/?username="+ username).then((response)=>{
+    //   if (!response.ok) throw('bad response');
+    //   return response.json();
+    // })
+    // .then((grade)=>{
+    //   grade = grade[0];
+    //   setProgress(grade && grade.percent ? grade.percent*100 : 1);
+    // })
+    // .catch((err)=>{
+    //   setProgress(1);
+    // })
   
-    function setProgress(value=1){
-      let bar = document.getElementById('course-progress');
-      bar.style.width =  value + "%"
-    }
+    // function setProgress(value=1){
+    //   let bar = document.getElementById('course-progress');
+    //   bar.style.width =  value + "%"
+    // }
+    fetch("https://madrasafree.com/api/grades/v0/course_grade/" + courseId + "/users/?username=" + username).then(function (response) {
+      if (!response.ok) throw 'bad response';
+      return response.json();
+      }).then(function (grade) {
+        grade = grade[0];
+        setProgress(grade && grade.percent ? grade.percent * 100 : 1);
+      }).catch(function (err) {
+        setProgress(1);
+      });
+
+function setProgress() {
+  var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+  var bar = document.getElementById('course-progress');
+  bar.style.width = value + "%";
+}
   </script>
   % if settings.FEATURES.get('ENABLE_DASHBOARD_SEARCH'):
     <%static:require_module module_name="course_search/js/dashboard_search_factory" class_name="DashboardSearchFactory">

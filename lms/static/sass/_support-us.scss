@@ -229,7 +229,7 @@
 			color: $theme-color-main;
 			font-weight: 700;
 			font-family: muliregular;
-			@include respond-to($xlarge-desktop) {
+			@include respond-to($desktop) {
 				font-size: 48px;
 			}
 		}
@@ -238,8 +238,17 @@
 			color: $text-color;
 			font-weight: 700;
 			font-family: muliregular;
-			@include respond-to($xlarge-desktop) {
+			@include respond-to($desktop) {
 				font-size: 36px;
+			}
+		}
+		p {
+			font-size: 20px;
+			color: $text-color;
+			font-weight: 400;
+			font-family: muliregular;
+			@include respond-to($desktop) {
+				font-size: 24px;
 			}
 		}
 	}

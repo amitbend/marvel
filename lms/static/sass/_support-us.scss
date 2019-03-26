@@ -227,7 +227,8 @@
 		h1 {
 			font-size: 24px;
 			color: $theme-color-main;
-			font-weight: bold;
+			font-weight: 700;
+			font-family: muliregular;
 			@include respond-to($xlarge-desktop) {
 				font-size: 48px;
 			}
@@ -235,7 +236,8 @@
 		h2 {
 			font-size: 20px;
 			color: $text-color;
-			font-weight: bold;
+			font-weight: 700;
+			font-family: muliregular;
 			@include respond-to($xlarge-desktop) {
 				font-size: 36px;
 			}

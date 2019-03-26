@@ -24,11 +24,11 @@
 			-ms-transform: rotate(3deg); /* IE 9 */
 			-webkit-transform: rotate(3deg); /* Safari */
 			transform: rotate(3deg);
-			color: $theme-color-main;
+			//color: $theme-color-main;
 		}
 		&.support-us-top-phrase-02 {
 			margin-right: 230px;
-			color: $theme-color-special;
+			//color: $theme-color-special;
 		}
 		&.support-us-top-phrase-03 {
 			-ms-transform: rotate(-3deg); /* IE 9 */
@@ -206,5 +206,10 @@
 	color: $theme-color-special;
 }
 
-
-
+.support-us-body {
+	.support-us-body-wrap {
+		max-width: 1440px;
+		padding: 40px 30px;
+		margin: auto;
+	}
+}

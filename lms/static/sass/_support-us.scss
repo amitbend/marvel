@@ -3,7 +3,7 @@
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	@include respond-to($xlarge-desktop) {
+	@include respond-to($desktop) {
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -24,7 +24,7 @@
 		font-weight: bold;
 		width: fit-content;
 		margin-top: 5px;
-		@include respond-to($xlarge-desktop) {
+		@include respond-to($desktop) {
 			font-size: 36px;
 		}
 		&.support-us-top-phrase-01 {
@@ -32,14 +32,14 @@
 			-ms-transform: rotate(3deg); /* IE 9 */
 			-webkit-transform: rotate(3deg); /* Safari */
 			transform: rotate(3deg);
-			@include respond-to($xlarge-desktop) {
+			@include respond-to($desktop) {
 				margin-right: -15px;
 			}
 		}
 		&.support-us-top-phrase-02 {
 			margin: auto;
 			margin-top: 5px;
-			@include respond-to($xlarge-desktop) {
+			@include respond-to($desktop) {
 				margin-right: 230px;
 			}
 		}

@@ -1,9 +1,14 @@
 .support-us-top {
 	background: url("../images/support-us/support-us-top-bg.png");
-	background-position: center;
+	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	min-height: 500px;
+	@include respond-to($xlarge-desktop) {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		min-height: 500px;
+	}
 	.support-us-top-wrap {
 		max-width: 1440px;
 		padding: 40px 30px;
@@ -14,21 +19,29 @@
 		padding: 5px 25px;
 		text-align: right;
 		background-color: $theme-footer-link;
-		font-size: 36px;
+		font-size: 18px;
 		line-height: 1;
 		font-weight: bold;
 		width: fit-content;
 		margin-top: 5px;
+		@include respond-to($xlarge-desktop) {
+			font-size: 36px;
+		}
 		&.support-us-top-phrase-01 {
-			margin-right: -15px;
+			margin: auto;
 			-ms-transform: rotate(3deg); /* IE 9 */
 			-webkit-transform: rotate(3deg); /* Safari */
 			transform: rotate(3deg);
-			//color: $theme-color-main;
+			@include respond-to($xlarge-desktop) {
+				margin-right: -15px;
+			}
 		}
 		&.support-us-top-phrase-02 {
-			margin-right: 230px;
-			//color: $theme-color-special;
+			margin: auto;
+			margin-top: 5px;
+			@include respond-to($xlarge-desktop) {
+				margin-right: 230px;
+			}
 		}
 		&.support-us-top-phrase-03 {
 			-ms-transform: rotate(-3deg); /* IE 9 */
@@ -211,5 +224,29 @@
 		max-width: 1440px;
 		padding: 40px 30px;
 		margin: auto;
+		h1 {
+			font-size: 24px;
+			color: $theme-color-main;
+			font-weight: bold;
+			@include respond-to($xlarge-desktop) {
+				font-size: 48px;
+			}
+		}
+		h2 {
+			font-size: 20px;
+			color: $text-color;
+			font-weight: bold;
+			@include respond-to($xlarge-desktop) {
+				font-size: 36px;
+			}
+		}
+	}
+}
+			
+			
+			
+			
+			
+		}
 	}
 }

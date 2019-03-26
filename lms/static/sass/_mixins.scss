@@ -3,9 +3,9 @@
     vertical-align: $align;
 }
 
-$desktop: '(min-width: 992px)';
+/*$desktop: '(min-width: 992px)';
 @mixin respond-to($media) {
   @media only screen and #{$media} {
     @content;
   }
-}
+}*/

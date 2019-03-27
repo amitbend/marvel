@@ -168,7 +168,7 @@
 					+ .support-us-form-label {
 						color: $theme-footer-link;
 						background-color: $theme-color-main-hover;
-						width: 130px;
+						width: 100%x;
 						height: 60px;
 						cursor: pointer;
 						border-radius: 20px;
@@ -178,12 +178,12 @@
 						font-weight: bold;
 						font-family: muliregular;
 						font-style: normal;
-						margin-bottom: 20px;
+						margin: 0 5px 20px;
 						@include respond-to($desktop) {
-							width: 160px;
 							height: 100px;
 							line-height: 100px;
-							font-size: 36px;
+							font-size: 30px;
+							margin: 0 5px 20px;
 						}
 					}
 					&:checked + .support-us-form-label  {
@@ -200,14 +200,13 @@
 				font-family: muliregular;
 				font-size: 16px;
 				font-weight: normal;
-				padding-right: 24px;
+				padding-right: 34px;
 				color: $theme-color-main;
 				@include respond-to($desktop) {
 					font-size: 24px;
 					font-weight: bold;
-					padding-right: 34px;
 				}
-				&a {
+				a {
 					color: $theme-color-main;
 				}
 				&:before,
@@ -219,9 +218,18 @@
 					height: 1.5rem;
 				}
 			}
-
+			
+			.custom-checkbox {
+				.custom-control-label {
+					&:before {
+						background-color: transparent;
+						border: 1px solid $text-color;
+					}
+				}
+			}
 			.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
 				background-color: $theme-color-main;
+				border: none;
 			}
 			
 			.custom-select {

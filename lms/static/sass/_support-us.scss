@@ -179,7 +179,7 @@
 						font-family: muliregular;
 						font-style: normal;
 						@include respond-to($desktop) {
-							width: 180px;
+							width: 160px;
 							height: 100px;
 							line-height: 100px;
 							font-size: 36px;
@@ -206,6 +206,9 @@
 					font-size: 24px;
 					font-weight: bold;
 				}
+				&a {
+					color: $theme-color-main;
+				}
 				&:before,
 				&:after {
 					top: 0;
@@ -220,11 +223,27 @@
 				background-color: $theme-color-main;
 			}
 			
+			.custom-select {
+				width: auto;
+				height: calc(2.25em + 2px);
+				padding: .375rem 2.25rem .375rem .75rem;
+				line-height: 1.5;
+				color: #495057;
+				border: 1px solid #4b4b4b;
+				border-radius: 4px;
+				font-size: 16px;
+				@include respond-to($desktop) {
+					border-radius: 10px;
+					font-size: 24px;
+				}
+			}
+			
 			.support-us-btn-wrap {
 				text-align: center;
 				@include respond-to($desktop) {
 					border-top: 1px solid $text-color;
 					text-align: left;
+					padding-top: 20px;
 				}
 			}
 
@@ -235,6 +254,7 @@
 				text-shadow: none;
 				border-radius: 8px;
 				box-shadow: none;
+				
 				&:hover, &:active {
 					background: #d39e00;
 					background-image: none;

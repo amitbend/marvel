@@ -57,8 +57,11 @@
 .support-us-body {
 	.support-us-body-wrap {
 		max-width: 1440px;
-		padding: 40px 30px 0;
+		padding: 20px 15px 0;
 		margin: auto;
+		@include respond-to($desktop) {
+			padding: 40px 30px;
+		}
 		h1 {
 			font-size: 24px;
 			line-height: 1.2;
@@ -151,6 +154,7 @@
 			background-color: $theme-footer-link;
 			box-shadow: 0px 3px 6px rgba(0,0,0,0.5);
 			margin-bottom: 20px;
+			padding: 20px;
 			@include respond-to($desktop) {
 				box-shadow: none;
 			}
@@ -164,15 +168,22 @@
 					+ .support-us-form-label {
 						color: $theme-footer-link;
 						background-color: $theme-color-main-hover;
-						width: 210px;
-						height: 100px;
+						width: 130px;
+						height: 60px;
 						cursor: pointer;
 						border-radius: 20px;
 						text-align: center;
-						line-height: 100px;
-						font-size: 36px;
+						line-height: 60px;
+						font-size: 21px;
 						font-weight: bold;
 						font-family: muliregular;
+						font-style: normal;
+						@include respond-to($desktop) {
+							width: 180px;
+							height: 100px;
+							line-height: 100px;
+							font-size: 36px;
+						}
 					}
 					&:checked + .support-us-form-label  {
 						background-color: $theme-color-main;
@@ -186,17 +197,35 @@
 				padding-bottom: 20px;
 				margin: 0;
 			}
-			.custom-control-label::before,
-			.custom-control-label::after {
-				top: 0;
-				left: auto;
-				right: -2rem;
-				width: 1.5rem;
-				height: 1.5rem;
+			.custom-control-label {
+				font-family: muliregular;
+				font-size: 16px;
+				font-weight: normal;
+				color: $theme-color-main;
+				@include respond-to($desktop) {
+					font-size: 24px;
+					font-weight: bold;
+				}
+				&:before,
+				&:after {
+					top: 0;
+					left: auto;
+					right: -2rem;
+					width: 1.5rem;
+					height: 1.5rem;
+				}
 			}
 
 			.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
 				background-color: $theme-color-main;
+			}
+			
+			.support-us-btn-wrap {
+				text-align: center;
+				@include respond-to($desktop) {
+					border-top: 1px solid $text-color;
+					text-align: left;
+				}
 			}
 
 			.btn-warning {

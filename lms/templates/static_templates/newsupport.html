@@ -49,7 +49,7 @@
 		
 		<section class="support-us-body">
 			<div class="support-us-body-wrap">
-				<div class="row">
+				<div class="row mb-5">
 				    <div class="col-lg-6 text-right">
 						<h1>מצטרפים למדרסה ומקדמים את המהפכה יחד</h1>
 					    <p>שואלים אותנו המון - ״למה בחינם?! למה שלא תיקחו קצת כסף מכל תלמיד? איך אתם מתקיימים בלי זה??״ התשובה שלנו ברורה - כי המטרה שלנו היא לתת לכל אחד ואחת הזדמנות ללמוד לתקשר בערבית, בלי חסמים מיותרים בדרך.</p>
@@ -58,8 +58,8 @@
 						<p>הגענו עד כאן בזכות אלפי אנשים שמאמינים - בנו ובחזון החברתי שלנו. מזמינים אתכם להצטרף ולתמוך! </p>
 					</div>
 					<div class="col-lg-6">
-						<h2>בחרו סכום תמיכה</h2>
 						<div class="support-us-form">
+							<h2>בחרו סכום תמיכה</h2>
 							<form id="donation-form">
 								<div class="form-group">
 									<div class="support-us-form-radios">
@@ -144,33 +144,8 @@
 		</section>
 
 	</div>
-	<script>
-	$('#donation-type').on('change', function() {
-		if (this.value == '1'){
-			$('#amount2').show();
-		  $('#amount1').hide();
-		}
-		else {
-			$('#amount1').show();
-		  $('#amount2').hide();
-		}
-
-	});
-	function afterValidate(){
-		// $("#donation-form").action = val;
-		// window.location.replace(val);
-		// return false;
-	}
-	// $("#submit").click(function(e) {
-
-	// 		var val = $('input[name=sum]:checked').val();
-	// 		console.log(val);
-	// 		$("#donation-form").action = val;
-	// 		window.location.replace(val);
-	// 		return false;
-		
-	// });
-
+	
+<script>
 	$('#submit').on('click', function(event) {
     var isvalidate = $("#donation-form")[0].checkValidity();
     if (isvalidate) {

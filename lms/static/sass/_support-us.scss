@@ -57,7 +57,7 @@
 .support-us-body {
 	.support-us-body-wrap {
 		max-width: 1440px;
-		padding: 40px 30px;
+		padding: 40px 30px 0;
 		margin: auto;
 		h1 {
 			font-size: 24px;
@@ -76,8 +76,10 @@
 			color: $text-color;
 			font-weight: 700;
 			font-family: muliregular;
+			text-align: center;
 			@include respond-to($desktop) {
 				font-size: 36px;
+				text-align: right;
 			}
 		}
 		h3  {
@@ -87,6 +89,7 @@
 			font-weight: 700;
 			font-family: muliregular;
 			text-align: right;
+			margin-bottom: 20px;
 			@include respond-to($desktop) {
 				font-size: 30px;
 			}
@@ -113,9 +116,13 @@
 		}
 		ul {
 		    list-style: none;
+			padding: 0 24px 0 0;
+    		margin: 20px 0;
 		}
 		li {
 			font-size: 16px;
+			line-height: 1.2;
+			margin-bottom: 10px;
 			color: $text-color;
 			font-weight: 400;
 			font-family: muliregular;
@@ -123,18 +130,28 @@
 				font-size: 24px;
 			}
 			&:before {
-			  content: "\2022";
-			  color: $theme-color-main;
-			  font-weight: bold;
-			  display: inline-block;
-			  width: 1em;
-			  margin-left: -1em;
+			    content: "\2022";
+			    color: $theme-color-main;
+			    font-weight: bold;
+			    display: inline-block;
+			    vertical-align: middle;
+				width: 24px;
+				font-size: 24px;
+				margin-right: -1em;
+				@include respond-to($desktop) {
+					width: 28px;
+					font-size: 28px;
+				}
 			}
 		}
 		
 		.support-us-form {
 			background-color: $theme-footer-link;
-			box-shadow: 12px 13px 13px rgba(0,0,0,0.16);
+			box-shadow: 0px 3px 6px rgba(0,0,0,0.5);
+			margin-bottom: 20px;
+			@include respond-to($desktop) {
+				box-shadow: none;
+			}
 			.support-us-form-radios {
 				text-align: center;
 				.support-us-form-input {

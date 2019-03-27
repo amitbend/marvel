@@ -2,7 +2,7 @@
 	background: url("../images/support-us/support-us-top-bg.png");
 	background-position: top center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: auto 250px;
 	@include respond-to($desktop) {
 		background-position: center;
 		background-repeat: no-repeat;
@@ -11,8 +11,11 @@
 	}
 	.support-us-top-wrap {
 		max-width: 1440px;
-		padding: 40px 30px;
+		padding: 0 15px;
 		margin: auto;
+		@include respond-to($desktop) {
+			padding: 40px 30px;
+		}
 	}
 	.support-us-top-phrase {
 		box-shadow: 0 3px 6px $text-color;
@@ -51,7 +54,7 @@
 	}
 }
 
-.support-us-features {
+/*.support-us-features {
 	.support-us-features-wrap {
 		max-width: 1440px;
 		padding: 40px 30px;
@@ -82,8 +85,8 @@
 			z-index: 4;
 		}
 		&.support-us-features-phrase-04 {
-			-ms-transform: rotate(4deg); /* IE 9 */
-			-webkit-transform: rotate(4deg); /* Safari */
+			-ms-transform: rotate(4deg); 
+			-webkit-transform: rotate(4deg);
 			transform: rotate(4deg);
 			z-index: 3;
 		}
@@ -97,21 +100,69 @@
 			z-index: 1;
 		}
 	}
-}
+}*/
 
 .support-us-form {
-	position: relative;
-	text-align: center;
-	padding: 15px;
-	direction: rtl;
-	margin-bottom: -120px;
-	h3 {
+	background-color: $theme-footer-link;
+	box-shadow: 12px 13px 13px rgba(0,0,0,0.16);
+	.support-us-form-radios {
+			text-align: center;
+		  .support-us-form-input {
+			display: none;
+			+ .support-us-form-label {
+				color: $theme-footer-link;
+				background-color: $theme-color-main-hover;
+				width: 130px;
+				height: 60px;
+				cursor: pointer;
+				border-radius: 20px;
+				text-align: center;
+				line-height: 60px;
+				font-size: $font-size-regular;
+				font-weight: bold;
+			}
+			&:checked + .support-us-form-label  {
+				background-color: $theme-color-main;
+			}
+		  }
+		}
+		
+		.custom-control {
+			padding-right: 1.5rem;
+			padding-left: 0;
+		}
+		.custom-control-label::before,
+		.custom-control-label::after {
+			top: 0;
+			left: auto;
+			right: -2rem;
+			width: 1.5rem;
+    		height: 1.5rem;
+		}
+		
+		.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+			background-color: $theme-color-main;
+		}
+		
+		.btn-warning {
+			color: $theme-footer-link;
+			background-image: none;
+			font-size: $font-size-regular;
+			text-shadow: none;
+			border-radius: 8px;
+			box-shadow: none;
+			&:hover, &:active {
+				background: #d39e00;
+				background-image: none;
+			}
+		}
+	/*h3 {
 		font-family: 'muliregular';
 	}
 	.theme-color-special {
 		color: $theme-color-special;	
-	}
-	.support-us-form-bg {
+	}*/
+	/*.support-us-form-bg {
 		background-color: $theme-color-main-hover;
 		position: absolute;
 		top:130px;
@@ -149,61 +200,8 @@
 				font-size: $font-size-regular;
 			}
 		}
-			
-		.support-us-form-radios {
-			text-align: center;
-		  .support-us-form-input {
-			display: none;
-			+ .support-us-form-label {
-				color: $theme-footer-link;
-				background-color: $theme-color-main;
-				width: 120px;
-				height: 120px;
-				cursor: pointer;
-				border-radius: 50%;
-				border: 1px solid #707070;
-				box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-				text-align: center;
-				line-height: 120px;
-				font-size: $font-size-regular;
-				font-weight: bold;
-			}
-			&:checked + .support-us-form-label  {
-				background-color: $theme-color-main-hover;
-			}
-		  }
-		}
-		
-		.custom-control {
-			padding-right: 1.5rem;
-			padding-left: 0;
-		}
-		.custom-control-label::before,
-		.custom-control-label::after {
-			top: 0;
-			left: auto;
-			right: -2rem;
-			width: 1.5rem;
-    		height: 1.5rem;
-		}
-		
-		.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-			background-color: $theme-color-main;
-		}
-		
-		.btn-warning {
-			color: $theme-footer-link;
-			background-image: none;
-			font-size: $font-size-regular;
-			text-shadow: none;
-			border-radius: 8px;
-			box-shadow: none;
-			&:hover, &:active {
-				background: #d39e00;
-				background-image: none;
-			}
-		}
-	}
+
+	}*/
 	
 }
 

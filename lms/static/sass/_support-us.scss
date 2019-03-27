@@ -237,19 +237,21 @@
 			.custom-select {
 				width: auto;
 				height: calc(2.25em + 2px);
-				padding: .375rem 2.25rem .375rem .75rem;
+				padding: .375rem 3.25rem .375rem .75rem;
 				line-height: 1.5;
 				color: #495057;
 				border: 1px solid #4b4b4b;
 				border-radius: 4px;
 				font-size: 16px;
-				background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23343a40' d='M7,10L12,15L17,10H7Z'/%3E%3C/svg%3E") no-repeat right .75rem center;
+				background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23343a40' d='M7,10L12,15L17,10H7Z'/%3E%3C/svg%3E") no-repeat right center;
 				@include respond-to($desktop) {
 					border-radius: 10px;
 					font-size: 24px;
 				}
-				option[selected]{
-					background-color: $theme-color-main-hover;
+				option {
+					&:hover {
+						background-color: $theme-color-main-hover;
+					}
 				}
 			}
 			

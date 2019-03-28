@@ -197,6 +197,12 @@
 				padding-right: 10px;
 				padding-left: 10px;
 				margin: 0;
+				&.offset-3 {
+					margin-right: 25%;
+					@include respond-to($desktop) {
+						margin: 0;
+					}
+				}
 			}
 			.custom-control-label {
 				font-family: muliregular;

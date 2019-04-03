@@ -7,7 +7,7 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		min-height: 500px;
+		min-height: 400px;
 	}
 	.support-us-top-wrap {
 		max-width: 1440px;
@@ -70,9 +70,9 @@
 			font-family: muliregular;
 			text-align: right;
 			margin-bottom: 10px;
+			letter-spacing: normal;
 			@include respond-to($desktop) {
-				font-size: 48px;
-				line-height: 1;
+				font-size: 44px;
 				margin-bottom: 20px;
 			}
 		}
@@ -97,18 +97,18 @@
 			text-align: right;
 			margin-bottom: 20px;
 			@include respond-to($desktop) {
-				font-size: 30px;
+				font-size: 44px;
 			}
 		}
 		h4  {
 			font-size: 24px;
 			line-height: 1.2;
-			color: $theme-color-main;
+			color: $theme-color-special;
 			font-weight: 700;
 			font-family: muliregular;
 			text-align: right;
 			@include respond-to($desktop) {
-				font-size: 48px;
+				font-size: 52px;
 			}
 		}
 		p {
@@ -155,7 +155,7 @@
 			background-color: $theme-footer-link;
 			box-shadow: 0px 3px 6px rgba(0,0,0,0.5);
 			margin-bottom: 20px;
-			padding: 30px 20px;
+			padding: 0px 20px;
 			@include respond-to($desktop) {
 				box-shadow: none;
 			}
@@ -181,10 +181,11 @@
 						font-style: normal;
 						margin: 0 0 20px;
 						@include respond-to($desktop) {
-							height: 100px;
-							line-height: 100px;
-							font-size: 30px;
-							margin: 0 0 20px;
+							width: 120px;
+							height: 120px;
+							border-radius: 50%;
+							line-height: 120px;
+							font-size: $font-size-regular;
 						}
 					}
 					&:checked + .support-us-form-label  {
@@ -210,6 +211,7 @@
 				font-weight: normal;
 				padding-right: 34px;
 				color: $theme-color-main;
+				font-style: normal;
 				@include respond-to($desktop) {
 					font-size: 24px;
 					font-weight: bold;
@@ -250,6 +252,7 @@
 				border-radius: 4px;
 				font-size: 16px;
 				background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23343a40' d='M7,10L12,15L17,10H7Z'/%3E%3C/svg%3E") no-repeat right center;
+				font-family: muliregular;
 				@include respond-to($desktop) {
 					border-radius: 10px;
 					font-size: 24px;

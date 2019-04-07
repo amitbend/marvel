@@ -33,7 +33,7 @@
         }
     }
     &_logo-holder {
-        display: none;
+        display: block;
         overflow: hidden;
         @media all and (min-width: 860px){
             // testing centering
@@ -52,7 +52,10 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
-            width: 180px;
+            width: 80px;
+			@media all and (min-width: 860px){
+				width: 180px;
+			}
         }
     }
     .nav-global {

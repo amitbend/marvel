@@ -1,34 +1,50 @@
 .support-us-top {
 	background: url("../images/support-us/support-us-top-bg.png");
-	background-position: center;
+	background-position: top center;
 	background-repeat: no-repeat;
-	background-size: cover;
-	min-height: 500px;
+	background-size: auto 250px;
+	@include respond-to($desktop) {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		min-height: 400px;
+	}
 	.support-us-top-wrap {
 		max-width: 1440px;
-		padding: 40px 30px;
+		padding: 0 15px;
 		margin: auto;
+		@include respond-to($desktop) {
+			padding: 40px 30px;
+		}
 	}
 	.support-us-top-phrase {
 		box-shadow: 0 3px 6px $text-color;
 		padding: 5px 25px;
 		text-align: right;
 		background-color: $theme-footer-link;
-		font-size: 36px;
+		font-size: 18px;
 		line-height: 1;
 		font-weight: bold;
 		width: fit-content;
 		margin-top: 5px;
+		@include respond-to($desktop) {
+			font-size: 36px;
+		}
 		&.support-us-top-phrase-01 {
-			margin-right: -15px;
+			margin: auto;
 			-ms-transform: rotate(3deg); /* IE 9 */
 			-webkit-transform: rotate(3deg); /* Safari */
 			transform: rotate(3deg);
-			color: $theme-color-main;
+			@include respond-to($desktop) {
+				margin-right: -15px;
+			}
 		}
 		&.support-us-top-phrase-02 {
-			margin-right: 230px;
-			color: $theme-color-special;
+			margin: auto;
+			margin-top: 5px;
+			@include respond-to($desktop) {
+				margin-right: 230px;
+			}
 		}
 		&.support-us-top-phrase-03 {
 			-ms-transform: rotate(-3deg); /* IE 9 */
@@ -38,6 +54,243 @@
 	}
 }
 
+.support-us-body {
+	.support-us-body-wrap {
+		max-width: 1440px;
+		padding: 20px 15px 0;
+		margin: auto;
+		@include respond-to($desktop) {
+			padding: 40px 30px;
+		}
+		h1 {
+			font-size: 24px;
+			line-height: 1.2;
+			color: $theme-color-main;
+			font-weight: 700;
+			font-family: muliregular;
+			text-align: right;
+			margin-bottom: 10px;
+			letter-spacing: normal;
+			@include respond-to($desktop) {
+				font-size: 36px;
+				margin-bottom: 20px;
+			}
+		}
+		h2 {
+			font-size: 20px;
+			color: $text-color;
+			font-weight: 700;
+			font-family: muliregular;
+			text-align: center;
+			margin-bottom: 20px;
+			@include respond-to($desktop) {
+				font-size: 26px;
+				text-align: right;
+			}
+		}
+		h3  {
+			font-size: 24px;
+			line-height: 1.2;
+			color: $theme-color-main;
+			font-weight: 700;
+			font-family: muliregular;
+			text-align: right;
+			margin-bottom: 20px;
+			@include respond-to($desktop) {
+				font-size: 36px;
+			}
+		}
+		h4  {
+			font-size: 24px;
+			line-height: 1.2;
+			color: $theme-color-special;
+			font-weight: 700;
+			font-family: muliregular;
+			text-align: right;
+			@include respond-to($desktop) {
+				font-size: 52px;
+			}
+		}
+		p {
+			font-size: 16px;
+			color: $text-color;
+			font-weight: 400;
+			font-family: muliregular;
+			@include respond-to($desktop) {
+				font-size: 24px;
+			}
+		}
+		ul {
+		    list-style: none;
+			padding: 0 24px 0 0;
+    		margin: 20px 0;
+		}
+		li {
+			font-size: 16px;
+			line-height: 1.2;
+			margin-bottom: 10px;
+			color: $text-color;
+			font-weight: 400;
+			font-family: muliregular;
+			@include respond-to($desktop) {
+				font-size: 24px;
+			}
+			&:before {
+			    content: "\2022";
+			    color: $theme-color-main;
+			    font-weight: bold;
+			    display: inline-block;
+			    vertical-align: middle;
+				width: 24px;
+				font-size: 24px;
+				margin-right: -1em;
+				@include respond-to($desktop) {
+					width: 28px;
+					font-size: 28px;
+				}
+			}
+		}
+		
+		.support-us-form {
+			background-color: $theme-footer-link;
+			box-shadow: 0px 3px 6px rgba(0,0,0,0.5);
+			margin-bottom: 20px;
+			padding: 30px 20px;
+			@include respond-to($desktop) {
+				box-shadow: none;
+				padding: 4px 20px 0;
+			}
+			.support-us-form-radios {
+				text-align: center;
+				@include respond-to($desktop) {
+					text-align: right;
+				}
+				.support-us-form-input {
+					display: none;
+					+ .support-us-form-label {
+						color: $theme-footer-link;
+						background-color: $theme-color-main-hover;
+						width: 100%;
+						height: 60px;
+						cursor: pointer;
+						border-radius: 20px;
+						text-align: center;
+						line-height: 60px;
+						font-size: 21px;
+						font-weight: bold;
+						font-family: muliregular;
+						font-style: normal;
+						margin: 0 0 20px;
+						@include respond-to($desktop) {
+							width: 120px;
+							height: 120px;
+							border-radius: 50%;
+							line-height: 120px;
+							font-size: $font-size-regular;
+						}
+					}
+					&:checked + .support-us-form-label  {
+						background-color: $theme-color-main;
+					}
+				}
+			}
+
+			.custom-control {
+				padding-right: 10px;
+				padding-left: 10px;
+				margin: 0;
+				&.offset-3 {
+					margin-right: 25%;
+					@include respond-to($desktop) {
+						margin: 0;
+					}
+				}
+			}
+			.custom-control-label {
+				font-family: muliregular;
+				font-size: 16px;
+				font-weight: normal;
+				padding-right: 34px;
+				color: $theme-color-main;
+				font-style: normal;
+				@include respond-to($desktop) {
+					font-size: 24px;
+					font-weight: bold;
+				}
+				a {
+					color: $theme-color-main;
+				}
+				&:before,
+				&:after {
+					top: 0;
+					left: auto;
+					right: 0;
+					width: 1.5rem;
+					height: 1.5rem;
+				}
+			}
+			
+			.custom-checkbox {
+				.custom-control-label {
+					&:before {
+						background-color: transparent;
+						border: 1px solid $text-color;
+					}
+				}
+			}
+			.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+				background-color: $theme-color-main;
+				border: none;
+			}
+			
+			.custom-select {
+				width: auto;
+				height: calc(2.25em + 2px);
+				padding: .375rem 3.25rem .375rem .75rem;
+				line-height: 1.5;
+				color: #495057;
+				border: 1px solid #4b4b4b;
+				border-radius: 4px;
+				font-size: 16px;
+				background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23343a40' d='M7,10L12,15L17,10H7Z'/%3E%3C/svg%3E") no-repeat right center;
+				font-family: muliregular;
+				@include respond-to($desktop) {
+					border-radius: 10px;
+					font-size: 24px;
+				}
+			}
+			
+			.support-us-btn-wrap {
+				text-align: center;
+				@include respond-to($desktop) {
+					border-top: 1px solid $text-color;
+					text-align: left;
+					padding-top: 20px;
+				}
+			}
+
+			.btn-warning {
+				color: $theme-footer-link;
+				background-image: none;
+				font-size: $font-size-regular;
+				text-shadow: none;
+				border-radius: 8px;
+				box-shadow: none;
+				&:hover, &:active {
+					background: #d39e00;
+					background-image: none;
+				}
+			}
+			#amount1 {
+				display: none;
+			}
+		}
+	}
+}
+
+
+
+/* OLD SUPPORT */
 .support-us-features {
 	.support-us-features-wrap {
 		max-width: 1440px;
@@ -206,5 +459,12 @@
 	color: $theme-color-special;
 }
 
-
-
+.support-us-body {
+	.support-us-body-wrap {
+		max-width: 1440px;
+		padding: 40px 30px;
+		margin: auto;
+	}
+}			
+			
+			

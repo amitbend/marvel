@@ -88,7 +88,7 @@ from pipeline_mako import render_require_js_path_overrides
   % endif
 
   % if uses_bootstrap:
-    <%static:js group='lms_bootstrap'/>
+    <script type="text/javascript" src="${static.url('common/js/vendor/bootstrap.bundle.js')}"></script>
   % endif
 
 

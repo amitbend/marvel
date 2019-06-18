@@ -230,11 +230,13 @@
 				}
 			}
             //for supportus-en
-			.custom-control-label-ltr {
-				    left:30px;
+			label.custom-control-label-ltr {
+					left:30px;
+					right:initial;
 				&:before,
 				&:after {
 					left: -40px;
+					right:initial;
 				}
 			}
 			

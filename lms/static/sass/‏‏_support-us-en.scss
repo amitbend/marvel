@@ -1,0 +1,25 @@
+.custom-control-label-ltr {
+	direction:ltr;
+	font-family: muliregular;
+	font-size: 16px;
+	font-weight: normal;
+	padding-right: 34px;
+	color: $theme-color-main;
+	font-style: normal;
+	left:30px;
+	@include respond-to($desktop) {
+		font-size: 24px;
+		font-weight: bold;
+	}
+	a {
+		color: $theme-color-main;
+	}
+	&:before,
+	&:after {
+		top: 0;
+		left: -40px;
+		right: auto;
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+}

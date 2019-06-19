@@ -144,7 +144,7 @@
 								<div class="form-group text-center text-lg-right">
 									<div class="custom-control custom-checkbox mr-sm-2">
 										<input type="checkbox" class="custom-control-input" id="customControlAutosizing" required>
-										<label class="custom-control-label" for="customControlAutosizing"> קראתי ואני מאשר את <a href="/tos">התקנון</a></label>
+										<label class="custom-control-label" for="customControlAutosizing"> קראתי ואני מאשר את <a href="/tos" target="_blank">התקנון</a></label>
 									  </div>
 								</div>
 								<div class="support-us-btn-wrap">
@@ -176,19 +176,19 @@
 	</div>
 	
 <script>
-	$('#donation-type').on('change', function() {
-		if (this.value == '1'){
+	$('#donation-type').on('change', function () {
+		if (this.value == '1') {
 			$('#amount2').show();
-		  $('#amount1').hide();
+			$('#amount1').hide();
 		}
 		else {
 			$('#amount1').show();
-		  $('#amount2').hide();
+			$('#amount2').hide();
 		}
 
 	});
-	
-	function afterValidate(){
+
+	function afterValidate() {
 		// $("#donation-form").action = val;
 		// window.location.replace(val);
 		// return false;
@@ -200,19 +200,20 @@
 	// 		$("#donation-form").action = val;
 	// 		window.location.replace(val);
 	// 		return false;
-		
+
 	// });
 
-	$('#submit').on('click', function(event) {
-    var isvalidate = $("#donation-form")[0].checkValidity();
-    if (isvalidate) {
-      event.preventDefault();
-	  var val = $('input[name=sum]:checked').val();
-	  $("#donation-form").action = val;
-	  window.location.replace(val);
-	  return false;
-      // HERE YOU CAN PUT YOUR AJAX CALL
-    }
-  });
+	$('#submit').on('click', function (event) {
+		var isvalidate = $("#donation-form")[0].checkValidity();
+		if (isvalidate) {
+			event.preventDefault();
+			var val = $('input[name=sum]:checked').val();
+			$("#donation-form").action = val;
+			window.open(val, '_blank');
+			//		window.location.replace(val);
+			return false;
+			// HERE YOU CAN PUT YOUR AJAX CALL
+		}
+	});
 </script>
 </main>

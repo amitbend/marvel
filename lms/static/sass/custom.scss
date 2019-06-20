@@ -1,0 +1,98 @@
+@import "const";
+@import "blocks/links";
+@import "blocks/fonts";
+@import "blocks/buttons";
+@import "blocks/form-elements";
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/courses-index-page";
+@import "blocks/dashboard";
+@import "blocks/about";
+@import "blocks/course-main";
+@import "blocks/wiki";
+@import "blocks/discussion";
+@import "blocks/instructor";
+@import "blocks/sysadmin";
+@import "blocks/login-register";
+@import "blocks/fullscreen-button";
+@import "blocks/progress";
+@import "blocks/profile-account";
+@import "blocks/slider";
+
+html, body {
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+	background: $body-bg !important;
+	position: relative;
+	line-height: 1.2;
+}
+
+.holder,
+.wrapper-preview-menu .preview-menu {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+body.view-in-course .instructor-dashboard-wrapper-2,
+body.view-in-course .wiki-wrapper {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.content-wrapper {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 0 15px;
+	background: $body-bg;
+}
+
+.window-wrap,
+.view-profile .window-wrap {
+	background: none;
+	position: relative;
+	box-sizing: border-box;
+}
+
+// fixed footer
+
+.window-wrap {
+	flex: 1 1 auto;
+	display: flex;
+	flex-flow: column nowrap;
+	min-height: 100vh;
+}
+
+#content {
+	flex: 1 1 auto;
+}
+
+// fixed footer [styles for IE10+]
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	body {
+		display: flex;
+	}
+
+	body,
+	.window-wrap {
+		flex: 1 1 auto;
+		display: flex;
+		flex-flow: column nowrap;
+		min-height: 100vh;
+	}
+
+	#content {
+		flex: 1 1 auto;
+	}
+
+	.wrapper-footer {
+		overflow: hidden;
+	}
+}

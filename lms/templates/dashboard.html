@@ -1,24 +1,29 @@
 <%page expression_filter="h"/>
 <%inherit file="main.html" />
-<%def name="online_help_token()"><% return "learnerdashboard" %>
-</%def>
+<%def name="online_help_token()"><% return "learnerdashboard" %></%def>
 <%namespace name='static' file='static_content.html'/>
 <%!
-from django.core.urlresolvers import reverse
+import pytz
+from datetime import datetime, timedelta
+from django.urls import reverse
 from django.utils.translation import ugettext as _
 from django.template import RequestContext
-import third_party_auth
+from entitlements.models import CourseEntitlement
 from third_party_auth import pipeline
+from util.date_utils import strftime_localized
+from opaque_keys.edx.keys import CourseKey
+from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from openedx.core.djangolib.js_utils import dump_js_escaped_json, js_escaped_string
 from openedx.core.djangolib.markup import HTML, Text
+
+from student.models import CourseEnrollment
 %>
 
 <%
   cert_name_short = settings.CERT_NAME_SHORT
   cert_name_long = settings.CERT_NAME_LONG
 %>
-
 
 <%block name="pagetitle"> עמוד הבית - מדרסה</%block>
 <%block name="bodyclass">view-dashboard is-authenticated</%block>

@@ -43,7 +43,7 @@
       display:flex;
       justify-content:center;
     }
-    .share-button a{
+    .share-button a,.share-button span{
       color:white;
       text-decoration:none;
       padding:4px 8px; 
@@ -93,7 +93,8 @@
    
         <div class="container" id="share-buttons">
                 <div class="share-button" id="facebook-button">
-                    <a href="#"><i class="fa fa-facebook"></i> פייסבוק
+                    <span class="facebook-share" data-js="facebook-share"><i class="fa fa-facebook"></i> פייסבוק</span>
+                    <!-- <a href="#"><i class="fa fa-facebook"></i> פייסבוק -->
                 </a>
                     </div>
                    
@@ -118,5 +119,12 @@
 <!-- smooth scroll JS -->
 <script src="/static/marvel/js/smooth-scroll.js"></script>
 <script>
+    var facebookShare = document.querySelector('[data-js="facebook-share"]');
 
+    facebookShare.onclick = function (e) {
+        e.preventDefault();
+        var facebookWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + document.URL, 'facebook-popup', 'height=350,width=600');
+        if (facebookWindow.focus) { facebookWindow.focus(); }
+        return false;
+    }
 </script>

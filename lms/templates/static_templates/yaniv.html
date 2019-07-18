@@ -85,11 +85,12 @@
 <main id="main" aria-label="Content" tabindex="-1">
 
         <section id="thank-for-support-section" class="container about line-height text-center">
-                <h1 id="title">גם אני תמכתי במדרסה!</h1>
-                <p id="sub-title">שתפו את הבשורה ויחד נקדם את המהפכה</p>
-                <p><a id="support-now-button" class="btn btn-warning my-2 my-sm-0" href="https://madrasafree.com/supportus">תמוך עכשיו
+                <h1 id="title">שֻכְּרַן!                    
+                    תודה על התמיכה!</h1>
+                <p id="sub-title">שתפו עם חבריכם</p>
+                <!-- <p><a id="support-now-button" class="btn btn-warning my-2 my-sm-0" href="https://madrasafree.com/supportus">תמוך עכשיו
                     <i class="fa fa-chevron-circle-left	
-                    "></i></a></p>
+                    "></i></a></p> -->
    
         <div class="container" id="share-buttons">
                 <div class="share-button" id="facebook-button">
@@ -101,12 +102,12 @@
             <div class="share-button" id="whatsapp-button">
               
 
-                    <a href="whatsapp://send?text=תמכו במדרסה: https://madrasafree.com/yaniv" data-action="share/whatsapp/share"
+                    <a href="whatsapp://send?text=תמכו במדרסה: https://madrasafree.com/supportus" data-action="share/whatsapp/share"
                     ><i class="fa fa-whatsapp"></i> וואטסאפ </a>
                
             </div>
             <div class="share-button" id="email-button">
-                    <a href="mailto:?subject=תמכו במדרסה&amp;body= גם אני תמכתי במדרסה, אני מזמין אתכם לתמוך גם ולהצטרף למהפכה https://madrasafree.com/yaniv"
+                    <a href="mailto:?subject=תמכו במדרסה&amp;body= גם אני תמכתי במדרסה, אני מזמין אתכם לתמוך גם ולהצטרף למהפכה https://madrasafree.com/supportus"
                     title="Share by Email"
                     ><i class="fa fa-envelope"></i> מייל </a>
             </div>
@@ -123,7 +124,7 @@
 
     facebookShare.onclick = function (e) {
         e.preventDefault();
-        var facebookWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + document.URL, 'facebook-popup', 'height=350,width=600');
+        var facebookWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=https://madrasafree.com/supportus', 'facebook-popup', 'height=350,width=600');
         if (facebookWindow.focus) { facebookWindow.focus(); }
         return false;
     }

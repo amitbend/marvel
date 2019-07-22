@@ -2,86 +2,25 @@
 <%! from django.utils.translation import ugettext as _ %>
 <%inherit file="../main.html" />
 
-<%block name="pagetitle"> תודה על תרומתכם | Thanks for supporting us</%block>
-
-
+<%block name="pagetitle">תמכו במהפכה | ٍJoin the Revolution </%block>
 <%block name="headextra">
+
 <!-- viewport -->
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- Search Engine -->
-<meta name="description" content="פחות מ-5% מהיהודים בישראל יודעים לנהל שיחה בסיסית בערבית מדוברת, אנחנו כאן כדי לשנות את זה. הסיפור שלנו מתחיל בסלון של ההורים של גילעד, בקיץ 2014">
+<meta name="description" content="מדרסה קיים בזכות שותפים כמוך. יחד אנחנו יוצרים חברה מתקשרת וטובה יותר. הצטרפו עכשיו!">
 <meta name="image" content="https://s3.eu-west-3.amazonaws.com/madrasa-site-images/LogoMadrasaConv1.jpg">
 <!-- Schema.org for Google -->
-<meta itemprop="name" content="תודה על תרומתכם | Thanks for supporting us">
-<meta itemprop="description" content="פחות מ-5% מהיהודים בישראל יודעים לנהל שיחה בסיסית בערבית מדוברת, אנחנו כאן כדי לשנות את זה. הסיפור שלנו מתחיל בסלון של ההורים של גילעד, בקיץ 2014">
+<meta itemprop="name" content=" תמכו במהפכה | ٍJoin the Revolution">
+<meta itemprop="description" content="מדרסה קיים בזכות שותפים כמוך. יחד אנחנו יוצרים חברה מתקשרת וטובה יותר. הצטרפו עכשיו!">
 <meta itemprop="image" content="https://s3.eu-west-3.amazonaws.com/madrasa-site-images/LogoMadrasaConv1.jpg">
 <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-<meta name="og:title" content="תודה על תרומתכם | Thanks for supporting us">
-<meta name="og:description" content="פחות מ-5% מהיהודים בישראל יודעים לנהל שיחה בסיסית בערבית מדוברת, אנחנו כאן כדי לשנות את זה. הסיפור שלנו מתחיל בסלון של ההורים של גילעד, בקיץ 2014">
+<meta name="og:title" content=" תמכו במהפכה | ٍJoin the Revolution">
+<meta name="og:description" content="מדרסה קיים בזכות שותפים כמוך. יחד אנחנו יוצרים חברה מתקשרת וטובה יותר. הצטרפו עכשיו!">
 <meta name="og:image" content="https://s3.eu-west-3.amazonaws.com/madrasa-site-images/LogoMadrasaConv1.jpg">
 
-<style>
+</%block>
 
-    #thank-for-support-section{
-        padding-bottom:0;
-        margin-bottom:0;
-        max-width:820px;
-
-    }
-    #title{
-        font-size:46px;
-        color:#85C559;
-    }
-    .sub-title{
-        font-size:20px;
-        margin-bottom:20px;
-        color:#4B4B4B;
-
-    }
-
-    #share-buttons{
-      padding-top:5px;
-      margin:auto;
-      display:flex;
-      justify-content:center;
-    }
-    .share-button a,.share-button span{
-      color:white;
-      text-decoration:none;
-      padding:4px 8px; 
-      border-radius:4px;
-      font-size:15px;
-      width:85px;
-      display:inline-block;
-      margin-right:5px;
-}
-    .share-button a:hover{
-    color:white;
-}
-    .share-button a:active{
-      color:white;
-    }
-    #email-button a{background-color:lightslategray;}
-    #whatsapp-button a{background-color:#48C658;}
-    #facebook-button span{background-color:#4267B2;cursor: pointer;}
-#support-now-button{
-    color:white;
-}
-
-@media screen and (max-width: 600px) {
- 
-    #title{
-      margin-top: 0;
-      font-size:38px;
-      line-height:46px;
-    }
-    #thank-for-support-section{
-        padding-right:20px;
-        padding-right:20px;
-    }
-}
-
-</style>
 
 <!-- Progress bar -->
 <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8.1/dist/polyfill.min.js"></script>
@@ -93,14 +32,15 @@
 
    GetSheetDone.labeledCols('1gB-A3BoqMjEY4pbAmN7iyyXLBcC1X1BtjeSc_NCtNz0',2)
   .then((data) => {
-    console.log('Data');
-    console.log(data);
     if (data && data.data && data.data[0] && data.data[0].donated && data.data[0].target){
         let dataObj = data.data[0];
         setProgress((dataObj.donated/dataObj.target)*100)
+        document.getElementById('joined').textContent=dataObj.numdonators;
+        document.getElementById('raised').textContent=dataObj.donated;
+        document.getElementById('target').textContent=dataObj.target;
     }
     else {
-        setProgress(1)
+        setProgress(70)
     }
   }).catch(err => {
     console.log('Error');
@@ -114,74 +54,221 @@
 </script>
 
 
+<main id="main" aria-label="Content" tabindex="-1" class="content-wrapper">
+	<div class="content-wrapper">
 
-</%block>
+		<section class="support-us-top d-flex align-items-center">
+			<div class="support-us-top-wrap flex-grow-1">
+				<div class="row align-items-center flex-grow-1">
+				  <div class="col-lg-6 order-lg-2 pr-lg-5 py-4">
+					  <div class="support-us-top-phrase support-us-top-phrase-01">
+						מדרסה קיים בזכות תומכים כמוך
+					  </div>
+					  <div class="support-us-top-phrase support-us-top-phrase-02">
+						  הצטרפו עכשיו!
+					  </div>
+					  <div class="support-us-top-phrase support-us-top-phrase-03 d-none d-md-block">
+						  יוצרים יחד חברה מתקשרת יותר וטובה יותר!
+					  </div>
+				  </div>
+				  <div class="col-lg-6 order-lg-1">
+					<div class="embed-responsive embed-responsive-16by9">
+					  <iframe class="embed-responsive-item" src="//www.youtube.com/embed/LYK6Jr_fRK4?wmode=transparent&amp;autoplay=0&amp;theme=dark&amp;controls=1&amp;autohide=0&amp;loop=0&amp;showinfo=0&amp;rel=0&amp;playlist=false&amp;enablejsapi=0" allowfullscreen></iframe>
+					</div>
+				  </div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="support-us-body">
+			<div class="support-us-body-wrap">
+                        
 
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v3.3"></script>
-
-
-
-<main id="main" aria-label="Content" tabindex="-1">
-        <section>
-                <div class="reg-user-progress text-center text-md-right p-3">
-                        <p>כמה התקדמתי?</p>
-                        <div class="progress mt-3 ml-md-3">
-                          <div class="progress-bar bg-warning" id="course-progress" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                     
+             
+				<div class="row mb-3 mb-lg-5 pl-lg-5">
+                        <div class="col-lg-6 text-right mb-4 mb-lg-0">
+                                <h2 class="text-center">₪ <span id="raised"></span></h2> 
                         </div>
-                </div>
-        </section>
+                        <div class="col-lg-6 text-right mb-4 mb-lg-0">
+                                <div class="reg-user-progress text-center text-md-right p-3">
+                                        <div class="progress mt-3 ml-md-3">
+                                          <div class="progress-bar progress-bar-striped bg-success" id="course-progress" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="col-lg-6 text-right mb-4 mb-lg-0">
+                            <p> מתוך יעד של <span id="target"></span> ₪ בחודש
+                                    לקראת חיזוק התשתית המשפטית והמחקרית של המיזם </p>
+                        </div>
+                        <div class="col-lg-6 text-right mb-4 mb-lg-0">
+                                <h3> <span id="joined"></span> כבר חברים במיזם </h3>
+                        </div>
 
+				    <div class="col-lg-6 text-right mb-4 mb-lg-0">
+						<h1>מצטרפים למדרסה ומקדמים את המהפכה יחד</h1>
+					    <p>שואלים אותנו המון - ״למה בחינם?! למה שלא תיקחו קצת כסף מכל תלמיד? איך אתם מתקיימים בלי זה??״ התשובה שלנו ברורה - כי המטרה שלנו היא לתת לכל אחד ואחת הזדמנות ללמוד לתקשר בערבית, בלי חסמים מיותרים בדרך.</p>
+						<p>זה לא ״מוצר״, זה לא תחביב, זו מטרה חברתית - ליצור יחד חברה ישראלית מתקשרת ובריאה יותר. 
+							זו משימה של כו-ל-נו, ובשבילנו - היא תכנית עבודה!</p>
+						<p>הגענו עד כאן בזכות אלפי אנשים שמאמינים - בנו ובחזון החברתי שלנו. מזמינים אתכם להצטרף ולתמוך! </p>
+					</div>
+					<div class="col-lg-6 pr-lg-5">
+						<div class="support-us-form">
+							<h2>בכמה תרצו להשתתף?</h2>
+							<form id="donation-form">
+								<div class="form-group" id="amount2">
+									<div class="support-us-form-radios row">
+										<div class="custom-control col-6 col-lg-4">
+											<input class="support-us-form-input" id="sum-25-sub" name="sum" type="radio" value="https://icredit.rivhit.co.il/payment/PaymentFullPage.aspx?GroupId=407fcb6b-375b-4a00-b61f-aca2bc62ff6a">
+											<label class="support-us-form-label" for="sum-25-sub">
+												 ₪ 25
+											</label>
+										</div>
 
-        <section id="thank-for-support-section" class="container about line-height text-center">
-                <h1 id="title">
-                        שֻכְּרַן!
-                    תודה שהצטרפת לקהילת התומכים של מדרסה! 
-                    </h1>
-                <p class="sub-title">
-אנחנו נמצאים בקמפיין גדילה מאד משמעותי בימים אלה, ומגייסים את כל מי שמאמין בערבית מדוברת ככלי לשיפור התקשורת בחברה שלנו! 
-</p>
-<p class="sub-title">
-מכירים אנשים שזה יעניין אותם? נשמח אם תשתפו 🙏🏽💚💙
-                </p>
-                <!-- <p><a id="support-now-button" class="btn btn-warning my-2 my-sm-0" href="https://madrasafree.com/supportus">תמוך עכשיו
-                    <i class="fa fa-chevron-circle-left	
-                    "></i></a></p> -->
-   
-        <div class="container" id="share-buttons">
-                <div class="share-button" id="facebook-button">
-                    <span class="facebook-share" data-js="facebook-share"><i class="fa fa-facebook"></i> פייסבוק</span>
-                    <!-- <a href="#"><i class="fa fa-facebook"></i> פייסבוק -->
-                </a>
-                    </div>
-                   
-            <div class="share-button" id="whatsapp-button">
-              
+										<div class="custom-control col-6 col-lg-4">
+											<input class="support-us-form-input" id="sum-50-sub" name="sum" type="radio" value="https://icredit.rivhit.co.il/payment/PaymentFullPage.aspx?GroupId=db976d37-2c9d-4247-8f6d-590727d2ced8" checked>
+											<label class="support-us-form-label" for="sum-50-sub">
+												 ₪ 50
+											</label>
+										</div>
 
-                    <a href="whatsapp://send?text=תמכו במדרסה: https://madrasafree.com/supportus" data-action="share/whatsapp/share"
-                    ><i class="fa fa-whatsapp"></i> וואטסאפ </a>
-               
-            </div>
-            <div class="share-button" id="email-button">
-                    <a href="mailto:?subject=תמכו במדרסה&amp;body= גם אני תמכתי במדרסה, אני מזמין אתכם לתמוך גם ולהצטרף למהפכה https://madrasafree.com/supportus"
-                    title="Share by Email"
-                    ><i class="fa fa-envelope"></i> מייל </a>
-            </div>
+										<div class="custom-control col-6 col-lg-4">
+											<input class="support-us-form-input" id="sum-100-sub" name="sum" type="radio" value="https://icredit.rivhit.co.il/payment/PaymentFullPage.aspx?GroupId=ca5cfd5b-1f99-45f5-acf6-68cd63026e26">
+											<label class="support-us-form-label" for="sum-100-sub">
+												 ₪ 100
+											</label>
+										</div>
+										<div class="custom-control col-6 col-lg-4">
+											<input class="support-us-form-input" id="sum-250-sub" name="sum" type="radio" value="https://icredit.rivhit.co.il/payment/PaymentFullPage.aspx?GroupId=22c9c896-0621-477b-868e-bd3939256283">
+											<label class="support-us-form-label" for="sum-250-sub">
+												₪ 250
+											</label>
+										</div>
 
-        </div>
-    </section>
+										<div class="custom-control col-6 offset-3 col-lg-4">
+											<input class="support-us-form-input" id="sum-other-sub" name="sum" type="radio" value="https://icredit.rivhit.co.il/payment/DonationPage.aspx?GroupId=c6b2764c-e4e7-4315-8c5d-c08190176c22">
+											<label class="support-us-form-label" for="sum-other-sub">
+												סכום אחר
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group" id="amount1">
+									<div class="support-us-form-radios row">
+										<div class="custom-control col-6 col-lg-4">
+											<input class="support-us-form-input" id="sum-50" name="sum" type="radio" value="https://icredit.rivhit.co.il/payment/PaymentFullPage.aspx?GroupId=2147d08a-4e8e-4d59-b5ad-306d0e652d9f">
+											<label class="support-us-form-label" for="sum-50">
+												 ₪ 50
+											</label>
+										</div>
+
+										<div class="custom-control col-6 col-lg-4">
+											<input class="support-us-form-input" id="sum-100" name="sum" type="radio" value="https://icredit.rivhit.co.il/payment/PaymentFullPage.aspx?GroupId=a419387f-63df-4e20-9fca-002cb73c6941">
+											<label class="support-us-form-label" for="sum-100">
+												 ₪ 100
+											</label>
+										</div>
+
+										<div class="custom-control col-6 col-lg-4">
+											<input class="support-us-form-input" id="sum-250" name="sum" type="radio" value="https://icredit.rivhit.co.il/payment/PaymentFullPage.aspx?GroupId=72f7657a-006c-4752-88aa-f4792a236b1f">
+											<label class="support-us-form-label" for="sum-250">
+												 ₪ 250
+											</label>
+										</div>
+										<div class="custom-control col-6 col-lg-4">
+											<input class="support-us-form-input" id="sum-500" name="sum" type="radio" value="https://icredit.rivhit.co.il/payment/PaymentFullPage.aspx?GroupId=0eb22e10-f907-4899-8575-2593a1a64287">
+											<label class="support-us-form-label" for="sum-500">
+												₪ 500
+											</label>
+										</div>
+
+										<div class="custom-control col-6 offset-3 col-lg-4">
+											<input class="support-us-form-input" id="sum-other" name="sum" type="radio" value="https://icredit.rivhit.co.il/payment/DonationPage.aspx?GroupId=d1ca29c9-740d-4f54-b5f8-eceaced09e1b">
+											<label class="support-us-form-label" for="sum-other">
+												סכום אחר
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group text-center text-lg-right">
+									<select  class="custom-select" id="donation-type">
+										<option value="1">תמיכה חודשית</option>
+										<option value="2">תשלום חד פעמי</option>
+									</select>
+								</div>
+								<div class="form-group text-center text-lg-right">
+									<div class="custom-control custom-checkbox mr-sm-2">
+										<input type="checkbox" class="custom-control-input" id="customControlAutosizing" required>
+										<label class="custom-control-label" for="customControlAutosizing"> קראתי ואני מאשר את <a href="/tos" target="_blank">התקנון</a></label>
+									  </div>
+								</div>
+								<div class="support-us-btn-wrap">
+									<button id="submit" type="submit" class="btn btn-warning"> תשלום מאובטח </button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-lg-6 text-right pl-lg-5">
+						<h3>יחד נבנה את הבית של לימודי הערבית המדוברת בישראל!</h3>
+						<p>התכניות שלנו לשנה הקרובה:</p>
+						<ul>
+							<li>פיתוח קורסים בשתי רמות לימוד נוספות לפחות!</li>
+							<li>פתיחת 10 מוקדים של מפגשי תרגול ושיח ברחבי הארץ</li>
+							<li>פיתוח פלטפורמת תרגול ראשונה מסוגה בוידאו</li>
+							<li>תכני העשרה ומיני קורסים בנושאים מגוונים - להגים בעולם הערבי, הכתב הערבי ועוד ועוד!</li>
+							<li>11,000 תלמידים כבר נרשמו והתחילו ללמוד - יחד נגיע לעוד עשרות אלפי אנשים</li>
+						</ul>
+					</div>
+					<div class="col-lg-6 text-right pr-lg-5">
+						<h4>צעד צעד, בדרך לחברה ישראלית שמתקשרת גם בערבית.</h4>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div>
 	
-</main>
-	
-<!-- smooth scroll JS -->
-<script src="/static/marvel/js/smooth-scroll.js"></script>
 <script>
-    var facebookShare = document.querySelector('[data-js="facebook-share"]');
+	$('#donation-type').on('change', function () {
+		if (this.value == '1') {
+			$('#amount2').show();
+			$('#amount1').hide();
+		}
+		else {
+			$('#amount1').show();
+			$('#amount2').hide();
+		}
 
-    facebookShare.onclick = function (e) {
-        e.preventDefault();
-        var facebookWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=https://madrasafree.com/supportus', 'facebook-popup', 'height=350,width=600');
-        if (facebookWindow.focus) { facebookWindow.focus(); }
-        return false;
-    }
+	});
+
+	function afterValidate() {
+		// $("#donation-form").action = val;
+		// window.location.replace(val);
+		// return false;
+	}
+	// $("#submit").click(function(e) {
+
+	// 		var val = $('input[name=sum]:checked').val();
+	// 		console.log(val);
+	// 		$("#donation-form").action = val;
+	// 		window.location.replace(val);
+	// 		return false;
+
+	// });
+
+	$('#submit').on('click', function (event) {
+		var isvalidate = $("#donation-form")[0].checkValidity();
+		if (isvalidate) {
+			event.preventDefault();
+			var val = $('input[name=sum]:checked').val();
+			$("#donation-form").action = val;
+			window.open(val, '_blank');
+			//		window.location.replace(val);
+			return false;
+			// HERE YOU CAN PUT YOUR AJAX CALL
+		}
+	});
 </script>
+</main>

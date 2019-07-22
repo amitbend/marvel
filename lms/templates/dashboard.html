@@ -43,6 +43,9 @@ from openedx.core.djangolib.markup import HTML, Text
 
 <%block name="js_extra">
   <script src="${static.url('js/commerce/credit.js')}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.min.js"></script>
+
+  
   <%static:js group='dashboard'/>
   <script type="text/javascript">
     $(document).ready(function() {

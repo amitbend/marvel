@@ -1,12 +1,19 @@
 // Import the original styles from edx-platform.
-// @import "lms/static/sass/lms-main-v2-rtl";
-@import "lms/static/sass/lms-main-v1-rtl";
+@import "lms/static/sass/lms-main-v2-rtl";
+// @import "lms/static/sass/lms-main-v1-rtl";
 
 div.window-wrap .theme-main-nav_list {
     margin-left: 0;
     list-style-type: none;
     list-style: none;
 }
+
+// Load the RTL version of the edX Pattern Library
+$pattern-library-path: '../edx-pattern-library' !default;
+@import 'edx-pattern-library/pattern-library/sass/edx-pattern-library-rtl';
+
+// Load the shared build
+@import 'build-lms-v2';
 
 // Our overrides for settings we want to change.
 @import "main";

@@ -155,8 +155,15 @@
     var token = getToken();
     if (token){
         var data = {"SalePrivateToken":token}
-        var options = {method : 'POST',cache : 'no-cache', headers : { 'Content-Type': 'application/json'},body: JSON.stringify(data)}
-        fetch("https://testicredit.rivhit.co.il/API/PaymentPageRequest.svc/SaleDetails").then(function (response) {
+        var options = {method : 'POST',cache : 'no-cache', 
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        mode: 'no-cors',
+        credentials: 'omit',
+        body: JSON.stringify(data)}
+        fetch("https://testicredit.rivhit.co.il/API/PaymentPageRequest.svc/SaleDetails",options).then(function (response) {
         if (!response.ok) throw 'bad response';
         return response.json();
         }).then(function (res) {

@@ -156,7 +156,7 @@
     if (token){
         var data = {"SalePrivateToken":token}
         var options = {method : 'POST',cache : 'no-cache', headers : { 'Content-Type': 'application/json'},body: JSON.stringify(data)}
-        fetch("https://testicredit.rivhit.co.il/API/PaymentPageRequest.svc/SaleDetails" + courseId + "/users/?username=" + username).then(function (response) {
+        fetch("https://testicredit.rivhit.co.il/API/PaymentPageRequest.svc/SaleDetails").then(function (response) {
         if (!response.ok) throw 'bad response';
         return response.json();
         }).then(function (res) {

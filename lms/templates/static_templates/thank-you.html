@@ -147,6 +147,11 @@
 <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8.1/dist/polyfill.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.0/dist/fetch.umd.min.js"></script>
 <script>
+    function getToken(){
+          var url = location.href;
+          var token = location.search.split('Token=')[1]
+          return token
+    }
     var token = getToken();
     if (token){
         var data = {"SalePrivateToken":token}
@@ -161,11 +166,7 @@
             console.error(err);
         });
 
-      function getToken(){
-          var url = location.href;
-          var token = location.search.split('Token=')[1]
-          return token
-      }
+
     }
     else {
         console.log('non existance')

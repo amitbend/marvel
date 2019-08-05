@@ -143,3 +143,33 @@
         return false;
     }
 </script>
+<!-- Progress bar -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8.1/dist/polyfill.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.0/dist/fetch.umd.min.js"></script>
+<script>
+    var token = getToken();
+    if (token){
+        var data = {"SalePrivateToken":token}
+        var options = {method : 'POST',cache : 'no-cache', headers : { 'Content-Type': 'application/json'},body: JSON.stringify(data)}
+        fetch("https://testicredit.rivhit.co.il/API/PaymentPageRequest.svc/SaleDetails" + courseId + "/users/?username=" + username).then(function (response) {
+        if (!response.ok) throw 'bad response';
+        return response.json();
+        }).then(function (res) {
+            console.log('success');
+            console.log(JSON.stringify(res));
+        }).catch(function (err) {
+            console.error(err);
+        });
+
+      function getToken(){
+          var url = location.href;
+          var token = location.search.split('Token=')[1]
+          return token
+      }
+    }
+    else {
+        console.log('non existance')
+    }
+
+    
+</script>

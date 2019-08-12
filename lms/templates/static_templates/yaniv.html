@@ -40,26 +40,26 @@
 <!-- <script src="GetSheetDone.js?0.1.4"></script> -->
 
 <script>
-    GetSheetDone.labeledCols('1gB-A3BoqMjEY4pbAmN7iyyXLBcC1X1BtjeSc_NCtNz0', 2)
-        .then((data) => {
-            if (data && data.data && data.data[0] && data.data[0].donated && data.data[0].target) {
-                let dataObj = data.data[0];
-                setProgress((dataObj.donated / dataObj.target) * 100)
-                //   document.getElementById('joined').textContent = dataObj.numdonators;
-                document.getElementById('raised').textContent = dataObj.donated;
-                document.getElementById('target').textContent = dataObj.target;
-            }
-            else {
-                setProgress(70)
-            }
-        }).catch(err => {
-            console.log('Error');
-            console.error(err);
-        });
-    function setProgress(value) {
-        var bar = document.getElementById('course-progress');
-        bar.style.width = value + "%";
-    }
+	GetSheetDone.labeledCols('1gB-A3BoqMjEY4pbAmN7iyyXLBcC1X1BtjeSc_NCtNz0', 2)
+		.then((data) => {
+			if (data && data.data && data.data[0] && data.data[0].donated && data.data[0].target) {
+				let dataObj = data.data[0];
+				setProgress((dataObj.donated / dataObj.target) * 100)
+				//   document.getElementById('joined').textContent = dataObj.numdonators;
+				document.getElementById('raised').textContent = dataObj.donated;
+				document.getElementById('target').textContent = dataObj.target;
+			}
+			else {
+				setProgress(70)
+			}
+		}).catch(err => {
+			console.log('Error');
+			console.error(err);
+		});
+	function setProgress(value) {
+		var bar = document.getElementById('course-progress');
+		bar.style.width = value + "%";
+	}
 </script>
 
 
@@ -95,17 +95,17 @@
 
                      
              
-				<div class="row mb-3 mb-lg-5 pl-lg-5">
+				<div class="row">
 
 
-				    <div class="col-lg-6 text-right mb-4 mb-lg-0">
+				    <div class="float-right text-right">
 						<h1>מצטרפים למדרסה ומקדמים את המהפכה יחד</h1>
 					    <p>שואלים אותנו המון - ״למה בחינם?! למה שלא תיקחו קצת כסף מכל תלמיד? איך אתם מתקיימים בלי זה??״ התשובה שלנו ברורה - כי המטרה שלנו היא לתת לכל אחד ואחת הזדמנות ללמוד לתקשר בערבית, בלי חסמים מיותרים בדרך.</p>
 						<p>זה לא ״מוצר״, זה לא תחביב, זו מטרה חברתית - ליצור יחד חברה ישראלית מתקשרת ובריאה יותר. 
 							זו משימה של כו-ל-נו, ובשבילנו - היא תכנית עבודה!</p>
 						<p>הגענו עד כאן בזכות אלפי אנשים שמאמינים - בנו ובחזון החברתי שלנו. מזמינים אתכם להצטרף ולתמוך! </p>
 					</div>
-					<div class="col-lg-6 pr-lg-5">
+					<div class="float-left">
 						<div class="support-us-form">
 
                                 <div class="reg-user-progress text-center text-md-right p-3">
@@ -239,39 +239,39 @@
 	</div>
 	
 <script>
-    $('#donation-type').on('change', function () {
-        if (this.value == '1') {
-            $('#amount2').show();
-            $('#amount1').hide();
-        }
-        else {
-            $('#amount1').show();
-            $('#amount2').hide();
-        }
-    });
-    function afterValidate() {
-        // $("#donation-form").action = val;
-        // window.location.replace(val);
-        // return false;
-    }
-    // $("#submit").click(function(e) {
-    // 		var val = $('input[name=sum]:checked').val();
-    // 		console.log(val);
-    // 		$("#donation-form").action = val;
-    // 		window.location.replace(val);
-    // 		return false;
-    // });
-    $('#submit').on('click', function (event) {
-        var isvalidate = $("#donation-form")[0].checkValidity();
-        if (isvalidate) {
-            event.preventDefault();
-            var val = $('input[name=sum]:checked').val();
-            $("#donation-form").action = val;
-            window.open(val, '_blank');
-            //		window.location.replace(val);
-            return false;
-            // HERE YOU CAN PUT YOUR AJAX CALL
-        }
-    });
+	$('#donation-type').on('change', function () {
+		if (this.value == '1') {
+			$('#amount2').show();
+			$('#amount1').hide();
+		}
+		else {
+			$('#amount1').show();
+			$('#amount2').hide();
+		}
+	});
+	function afterValidate() {
+		// $("#donation-form").action = val;
+		// window.location.replace(val);
+		// return false;
+	}
+	// $("#submit").click(function(e) {
+	// 		var val = $('input[name=sum]:checked').val();
+	// 		console.log(val);
+	// 		$("#donation-form").action = val;
+	// 		window.location.replace(val);
+	// 		return false;
+	// });
+	$('#submit').on('click', function (event) {
+		var isvalidate = $("#donation-form")[0].checkValidity();
+		if (isvalidate) {
+			event.preventDefault();
+			var val = $('input[name=sum]:checked').val();
+			$("#donation-form").action = val;
+			window.open(val, '_blank');
+			//		window.location.replace(val);
+			return false;
+			// HERE YOU CAN PUT YOUR AJAX CALL
+		}
+	});
 </script>
 </main>

@@ -154,14 +154,14 @@
     }
     var token = getToken();
     if (token){
-        var data = {"SalePrivateToken":token}
+        var data = {"token":token}
         var options = {method : 'POST',cache : 'no-cache', 
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
         // mode: 'no-cors',
-        mode : 'no-cors',
+        // mode : 'no-cors',
         // credentials: 'omit',
         redirect: 'follow',
         body: JSON.stringify(data)}
@@ -171,7 +171,8 @@
         }).then(function (res) {
             console.log('success');
             console.log(JSON.stringify(res));
-            console.log(res.body);
+            console.log(res.body.Amount);
+            fbq('track', 'Purchase', {currency: "ILS", value: res.body.Amount });
         }).catch(function (err) {
             console.error(err);
         });

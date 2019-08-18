@@ -165,12 +165,13 @@
         // credentials: 'omit',
         redirect: 'follow',
         body: JSON.stringify(data)}
-        fetch("https://testicredit.rivhit.co.il/API/PaymentPageRequest.svc/SaleDetails",options).then(function (response) {
+        fetch("https://madrasa-sale.admin159.now.sh/",options).then(function (response) {
         if (!response.ok) throw 'bad response';
         return response.json();
         }).then(function (res) {
             console.log('success');
             console.log(JSON.stringify(res));
+            console.log(res.body);
         }).catch(function (err) {
             console.error(err);
         });

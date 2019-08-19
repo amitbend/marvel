@@ -172,8 +172,8 @@
         }).then(function (res) {
             console.log('success');
             console.log(JSON.stringify(res));
-            console.log(res.body.Amount);
-            fbq('track', 'Purchase', {currency: "ILS", value: res.body.Amount });
+            console.log(res.data.Amount);
+            fbq('track', 'Purchase', {currency: "ILS", value: res.data.Amount });
         }).catch(function (err) {
             console.error(err);
         });

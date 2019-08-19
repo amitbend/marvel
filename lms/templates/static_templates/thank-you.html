@@ -155,7 +155,7 @@
     var token = getToken();
     if (token){
         var data = {"token":token}
-        var options = {method : 'POST',cache : 'no-cache', 
+        var options = {method : 'GET',cache : 'no-cache', 
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -164,8 +164,9 @@
         // mode : 'no-cors',
         // credentials: 'omit',
         redirect: 'follow',
-        body: JSON.stringify(data)}
-        fetch("https://madrasa-sale.admin159.now.sh/",options).then(function (response) {
+        // body: JSON.stringify(data)}
+        }
+        fetch(`https://madrasa-sale.admin159.now.sh/?token=${token}`,options).then(function (response) {
         if (!response.ok) throw 'bad response';
         return response.json();
         }).then(function (res) {

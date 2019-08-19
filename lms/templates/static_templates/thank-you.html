@@ -166,7 +166,7 @@
         redirect: 'follow',
         // body: JSON.stringify(data)}
         }
-        fetch(`https://madrasa-sale.admin159.now.sh/?token=${token}`,options).then(function (response) {
+        fetch('https://madrasa-sale.admin159.now.sh/?token=' + token,options).then(function (response) {
         if (!response.ok) throw 'bad response';
         return response.json();
         }).then(function (res) {

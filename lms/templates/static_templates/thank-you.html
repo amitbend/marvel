@@ -162,6 +162,7 @@
             reportObj
         // end parameter object data
         );
+        document.cookie = "dvalue= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
     }
     function getDValue(cname) {
         var cookiestring=RegExp(""+cname+"[^;]+").exec(document.cookie);

@@ -147,42 +147,29 @@
 <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8.1/dist/polyfill.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.0/dist/fetch.umd.min.js"></script>
 <script>
-    function getToken(){
-          var url = location.href;
-          var token = location.search.split('Token=')[1]
-          return token
-    }
-    var token = getToken();
-    if (token){
-        var data = {"token":token}
-        var options = {method : 'GET',cache : 'no-cache', 
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        // mode: 'no-cors',
-        // mode : 'no-cors',
-        // credentials: 'omit',
-        redirect: 'follow',
-        // body: JSON.stringify(data)}
+    function reportBuy(rawValue){
+        var reportObj = {content_name : rawValue, content_type : 'product'};
+        if (rawValue.indexOf("sub") > -1){
+            reportObj.sub = true;
         }
-        fetch('https://madrasa-sale-5sif7fo5y.now.sh/?Token=' + token,options).then(function (response) {
-        if (!response.ok) throw 'bad response';
-        return response.json();
-        }).then(function (res) {
-            console.log('success');
-            console.log(JSON.stringify(res));
-            console.log(res.data.Amount);
-            fbq('track', 'Purchase', {currency: "ILS", value: res.data.Amount });
-        }).catch(function (err) {
-            console.error(err);
-        });
-
-
+        var value = parseInt(rawValue.replace(/[^0-9\.]/g, ''));
+        if (value) {
+            reportObj.value = value;
+            reportObj.currency = "ILS";
+        }
+        console.dir(reportObj)
+        fbq('track', 'Purchase',
+            reportObj
+        // end parameter object data
+        );
     }
-    else {
-        console.log('non existance')
+    function getDValue(cname) {
+        var cookiestring=RegExp(""+cname+"[^;]+").exec(document.cookie);
+        return decodeURIComponent(!!cookiestring ? cookiestring.toString().replace(/^[^=]+./,"") : "");
     }
-
+    var dvalue = getDValue("dvalue");
+    if (dvalue){
+        reportBuy(dvalue);
+    }
     
 </script>
